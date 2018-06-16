@@ -1,5 +1,5 @@
 ﻿## 웹 개발자 직군 정리
-<img src="job_organiztion.jpg">	
+<img src="https://github.com/SWTreeWolf/semi/edit/master/job_organiztion.jpg">	
 <hr>
 
   
