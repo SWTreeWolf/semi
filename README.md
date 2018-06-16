@@ -43,10 +43,9 @@
 
 ### 계획
 
-- DB
+#### DB
 ![대략적임](DB.png)
 
-- layout : flip, B-side poolvilla
-
+> layout : flip, B-side poolvilla
 > Board 출처 : https://m.blog.naver.com/kjhjun/220868708278
 
