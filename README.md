@@ -1,4 +1,7 @@
-﻿## 웹 개발자 직군 정리
+## 준비중이며, 따로 원하는 바가 존재하면 얘기 부탁드리겠습니다.
+
+
+## 웹 개발자 직군 정리
 ![직군](./job_oragnization.jpg)
 <hr>
 
@@ -41,4 +44,9 @@
 ### 계획
 
 - DB
-![대략적임](DB.jpg)
+![대략적임](DB.png)
+
+- layout : flip, B-side poolvilla
+
+> Board 출처 : https://m.blog.naver.com/kjhjun/220868708278
+
