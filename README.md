@@ -1,5 +1,5 @@
 ﻿## 웹 개발자 직군 정리
-<img src="//file.okky.kr/images/1481766085204.jpg">	
+<img src="job_organiztion.jpg">	
 <hr>
 
   
