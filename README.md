@@ -1,5 +1,5 @@
 ﻿## 웹 개발자 직군 정리
-<img src="https://github.com/SWTreeWolf/semi/edit/master/job_organiztion.jpg">	
+![직군](./job_oragnization.jpg)
 <hr>
 
   
@@ -41,4 +41,4 @@
 ### 계획
 
 - DB
-
+![대략적임](DB.jpg)
