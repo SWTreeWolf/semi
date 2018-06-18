@@ -1,5 +1,5 @@
 ## 준비중이며, 따로 원하는 바가 존재하면 얘기 부탁드리겠습니다.
-
+> github & eclipse 하는법 : http://gasaesososo.tistory.com/9?category=726951
 
 ## 웹 개발자 직군 정리
 ![직군](./job_oragnization.jpg)
