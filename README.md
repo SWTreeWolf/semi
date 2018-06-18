@@ -12,6 +12,8 @@
 
 > 펜션예약시스템 참고자료 : https://m.blog.naver.com/PostView.nhn?blogId=javaking75&logNo=220123384251&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 
+> git 협업: https://milooy.wordpress.com/2017/06/21/working-together-with-github-tutorial/
+
 ## 웹 개발자 직군 정리
 ![직군](./temp_images/job_oragnization.jpg)
 <hr>
