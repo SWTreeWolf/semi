@@ -1,4 +1,7 @@
 ## 준비중이며, 따로 원하는 바가 존재하면 얘기 부탁드리겠습니다.
+
+### 되도록이면 master를 건들지 마시고, branch하여 사용해주시기 바랍니다.
+
 > github & eclipse 하는법 : http://gasaesososo.tistory.com/9?category=726951
 
 > github 팀원 초대 : http://www.itpaper.co.kr/github%EC%97%90-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B3%A0-%ED%8C%80%EC%9B%90-%EC%B4%88%EB%8C%80%ED%95%98%EA%B8%B0/
@@ -8,7 +11,6 @@
 > git 사용방법 : https://backlog.com/git-tutorial/kr/
 
 > 펜션예약시스템 참고자료 : https://m.blog.naver.com/PostView.nhn?blogId=javaking75&logNo=220123384251&proxyReferer=https%3A%2F%2Fwww.google.com%2F
-
 
 ## 웹 개발자 직군 정리
 ![직군](./temp_images/job_oragnization.jpg)
