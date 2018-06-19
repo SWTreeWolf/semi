@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>intro</title>
@@ -8,34 +9,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            var windowWidth = $(window).width();
-            var windowHeight = $(window).height();
 
-            $(window).resize(function() {
-                windowWidth = $(window).width();
-                windowHeight = $(window).height();
-                $('#av').css({
-                    "width": windowWidth,
-                    "height": windowHeight,
-                    "left": 0,
-                    "top": 0
-                });
-            })
-        })
+        });
     </script>
 </head>
 
 <body>
+    <header id="header">
+        <a href="#" class="btn_menu">
+            <img src="images/menu_icon.png">
+        </a>
+        <p class="pension">pension</p>
+    </header>
     <section class="intro">
         <div class="intro_wrap">
             <div class="txt_wrap">
                 <div class="d_t">
-                    <div class="d_c"></div>
+                    <div class="d_c">
+                        <p class="txt01">
+                            정어어어어어어어말 편한
+                            <br>펜션입니다
+                        </p>
+                    </div>
                 </div>
             </div>
+
             <div class="av_wrap">
                 <video autoplay loop muted id="av">
-                    <source src="images/video/pension.mp4" type="video/mp4">
+                <source src="images/video/pension.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -44,13 +45,20 @@
 
     </section>
     <section class="content" id="container">
-        <div class="produce"></div>
-        <div class="diameter"></div>
+        <div class="produce">펜션소개글</div>
+        <div class="diameter">외경 및 야경 설명</div>
+        <!--외경 및 야경-->
         <div class="directions">
             <p>google api</p>
+            <div class="map"></div>
+            <div class="location">위치 및 주소 작성</div>
         </div>
     </section>
 
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <h1>확인용입니다.</h1>
+        <div class="footer_center"></div>
+    </footer>
 </body>
+
 </html>
