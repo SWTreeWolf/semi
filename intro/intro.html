@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>intro</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/intro_common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var windowWidth = $(window).width();
+            var windowHeight = $(window).height();
+
+            $(window).resize(function() {
+                windowWidth = $(window).width();
+                windowHeight = $(window).height();
+                $('#av').css({
+                    "width": windowWidth,
+                    "height": windowHeight,
+                    "left": 0,
+                    "top": 0
+                });
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <section class="intro">
+        <div class="intro_wrap">
+            <div class="txt_wrap">
+                <div class="d_t">
+                    <div class="d_c"></div>
+                </div>
+            </div>
+            <div class="av_wrap">
+                <video autoplay loop muted id="av">
+                    <source src="images/video/pension.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+    <section class="produce">
+
+    </section>
+    <section class="content" id="container">
+        <div class="produce"></div>
+        <div class="diameter"></div>
+        <div class="directions">
+            <p>google api</p>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+</body>
+</html>
