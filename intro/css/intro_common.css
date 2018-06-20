@@ -82,8 +82,6 @@ body {
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
-    height: 500px;
-    background-color: aqua;
 }
 
 #header {
@@ -100,9 +98,9 @@ header {
 
 #footer {
     position: relative;
-    text-align: relative;
+    text-align: left;
     max-width: 1920px;
-    margin: 205px auto 0 auto;
+    margin: 10px auto 0 auto;
     padding: 30px;
     box-sizing: border-box;
 }
@@ -116,8 +114,6 @@ header {
     font-weight: 700;
 }
 
-
-
 .intro .txt_wrap .txt01 {
     font-weight: 700;
     font-size: 36px;
@@ -128,5 +124,71 @@ header {
 }
 
 .footer_center {
-    border: 1px solid black;
+    position: absolute;
+    top : 50px;
+    right : 120px;
+}
+
+.footer_center > div {
+    float:left;
+    margin-left: 50px;
+}
+
+.question .question_title {
+    font-size: 18px;
+    color: #333;
+    font-weight: 400;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+.question .question_txt {
+    font-size: 28px;
+    color : #333;
+    font-weight: 400;
+}
+
+#footer h2 {
+    padding-top: 18px;
+    color: #333;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+#footer address {
+    font-size: 15px;
+    color: #666;
+    line-height: 24px;
+}
+
+#footer address span {
+    display: block;
+}
+
+.content > div .bg_wrap {
+    position: absolute;
+    left : 0;
+    top : 0;
+    width : 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.produce_01 .txt_wrap {
+    position: absolute;
+    bottom: 147px;
+    left : 0;
+    width: 100%;
+}
+
+.produce_01 {
+    height: 900px;
+    overflow: hidden;
+}
+
+.produce_01 .bg_wrap {
+    background-image: url(../images/main01_visual.jpg);
 }
