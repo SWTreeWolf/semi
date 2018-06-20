@@ -59,7 +59,7 @@ body {
 }
 
 #header .btn_menu {
-    position: absolute;
+    position: fixed;
     top: 30px;
     left: 30px;
     width: 60px;
@@ -73,7 +73,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 5;
+    z-index: 20;
 }
 
 .content > div {
@@ -86,15 +86,13 @@ body {
 
 #header {
     position: absolute;
-    top : 0;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
 }
 
-header {
-    
-}
+header {}
 
 #footer {
     position: relative;
@@ -106,7 +104,7 @@ header {
 }
 
 #header .pension {
-    position: absolute;
+    position: fixed;
     right: 30px;
     top: 25px;
     font-size: 36px;
@@ -118,19 +116,19 @@ header {
     font-weight: 700;
     font-size: 36px;
     line-height: 50px;
-    width: 300px; 
+    width: 300px;
     margin: 0 auto;
     color: white;
 }
 
 .footer_center {
     position: absolute;
-    top : 50px;
-    right : 120px;
+    top: 50px;
+    right: 120px;
 }
 
 .footer_center > div {
-    float:left;
+    float: left;
     margin-left: 50px;
 }
 
@@ -145,12 +143,12 @@ header {
 
 .question .question_txt {
     font-size: 28px;
-    color : #333;
+    color: #333;
     font-weight: 400;
 }
 
 #footer h2 {
-    padding-top: 18px;
+    font-size: 18px;
     color: #333;
     font-weight: 400;
     line-height: 24px;
@@ -168,9 +166,9 @@ header {
 
 .content > div .bg_wrap {
     position: absolute;
-    left : 0;
-    top : 0;
-    width : 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center top;
@@ -180,7 +178,7 @@ header {
 .produce_01 .txt_wrap {
     position: absolute;
     bottom: 147px;
-    left : 0;
+    left: 0;
     width: 100%;
 }
 
@@ -191,4 +189,58 @@ header {
 
 .produce_01 .bg_wrap {
     background-image: url(../images/main01_visual.jpg);
+}
+
+#btn_top_scroll {
+    position: fixed;
+    right: 50px;
+    bottom: 60px;
+    width: 33px;
+    height: 33px;
+    z-index: 20;
+}
+
+#btn_top_scroll > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.content > .diameter {
+    height: 850px;
+    overflow: hidden;
+}
+
+.diameter > div .bg_wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500px;
+    height: 500px;
+}
+
+.diameter > .bg_wrap {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.intro .txt_wrap .obj01 {
+    position: relative;
+    margin-top: 44px;
+    text-align: center;
+}
+
+
+.intro .txt_wrap .obj02 {
+    position: absolute;
+    bottom : 80px;
+    left : 0;
+    width: 100%;
+    text-align: center;
 }

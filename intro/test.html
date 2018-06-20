@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
+        .test{
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+        }
+        
+        .btn_on{
+            position: absolute;
+            left : 0;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            background-color: antiquewhite;
+        }
+        
+        .black{
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.5;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(function() {
+            $('#test').on('click',function(){
+                
+            });
+        })
+    </script>
 </head>
+
 <body>
-    <video src="images/video/pension_origin.mp4"></video>
+    <div class="test"></div>
+    <button id="#test">test</button>
+    <div class="black"></div>
+    <div class="btn_on">
+        
+    </div>
 </body>
 </html>
