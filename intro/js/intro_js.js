@@ -6,12 +6,11 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.diameter_bxslider').bxSlider({
-        auto: true,
+    var myslider = $('.diameter_bxslider').bxSlider({
         cation: true,
         mode: 'fade',
         captions: true,
-        slideWidth: 2000
+        slideWidth: 500
     });
 
     $('.obj01').on('click', function () {
@@ -25,10 +24,43 @@ $(document).ready(function () {
         return false;
     });
 
+    $('.prev_btn').click(function () {
+        myslider.goToPrevSlide();
+        ddiv();
+        return false;
+    })
+
+    $('.next_btn').click(function () {
+        myslider.goToNextSlide();
+        ddiv();
+        return false;
+    })
+
     $('#map').initMap;
 
-
+    function ddiv() {
+        var curr = myslider.getCurrentSlide();
+        switch (curr) {
+            case 0:
+                $('.txtwrap_01').css('display', 'block');
+                $('.txtwrap_02').css('display', 'none');
+                $('.txtwrap_03').css('display', 'none');
+                break;
+            case 1:
+                $('.txtwrap_01').css('display', 'none');
+                $('.txtwrap_02').css('display', 'block');
+                $('.txtwrap_03').css('display', 'none');
+                break;
+            case 2:
+                $('.txtwrap_01').css('display', 'none');
+                $('.txtwrap_02').css('display', 'none');
+                $('.txtwrap_03').css('display', 'block');
+                break;
+        }
+    }
 });
+
+
 
 function initMap() {
     var uluru = {

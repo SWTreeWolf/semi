@@ -67,7 +67,7 @@ body {
     z-index: 5;
 }
 
-#header .btn_menu img {
+#header .btn_menu .img {
     position: absolute;
     top: 0;
     left: 0;
@@ -85,11 +85,10 @@ body {
 }
 
 #header {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
 }
 
 header {}
@@ -110,6 +109,7 @@ header {}
     font-size: 36px;
     color: #644d9d;
     font-weight: 700;
+    z-index: 300
 }
 
 .intro .txt_wrap .txt01 {
@@ -188,7 +188,7 @@ header {}
 }
 
 .produce_01 .bg_wrap {
-    background-image: url(../images/main01_visual.jpg);
+    background-image: url(../images/index_image/main01_visual.jpg);
 }
 
 #btn_top_scroll {
@@ -207,8 +207,9 @@ header {}
 }
 
 .content > .diameter {
-    height: 850px;
-    overflow: hidden;
+    width : 100%;
+    height: 800px;
+    background-image: url(../images/bg_02.jpg)
 }
 
 .diameter > div .bg_wrap {
@@ -236,11 +237,97 @@ header {}
     text-align: center;
 }
 
-
 .intro .txt_wrap .obj02 {
     position: absolute;
     bottom : 80px;
     left : 0;
     width: 100%;
     text-align: center;
+}
+
+.diameter .prev {
+    position: absolute;
+    left : 0;
+    top : 0;
+    width: 10%;
+    height: 100%;
+}
+
+.diameter .next {
+    position: absolute;
+    right : 0;
+    top : 0;
+    width: 10%;
+    height: 100%;
+}
+
+div > h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #666;
+}
+
+div > p {
+    letter-spacing: 1px;
+    line-height: 200%;
+}
+
+.prev a > img {
+    width: 100%;
+    height: 100%;
+}
+
+.prev > a {
+    position: absolute;
+    top : 25%;
+    display: block;
+    vertical-align: middle;
+    width: 100%;
+    height: 50%;
+}
+
+.next > a {
+    position: absolute;
+    top : 25%;
+    display: block;
+    vertical-align: middle;
+    width: 100%;
+    height: 50%;
+}
+
+.next a > img {
+    width: 100%;
+    height: 100%;
+}
+
+.diameter .txtwrap_01 {
+    display: block;
+    position: absolute;
+    top : 30%;
+    right: 10%;
+    width: 700px;
+    height: 300px;
+}
+
+.diameter .txtwrap_02 {
+    display: none;
+    position: absolute;
+    top : 30%;
+    right: 10%;
+    width: 700px;
+    height: 300px;
+}
+
+.diameter .txtwrap_03 {
+    display: none;
+    position: absolute;
+    top : 30%;
+    right: 10%;
+    width: 700px;
+    height: 300px;
 }

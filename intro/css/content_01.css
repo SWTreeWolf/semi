@@ -1,0 +1,15 @@
+#content_01 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    overflow: auto;
+}
+
+
+
+#content_01 > .data_01 {
+    /*height: 900px;
+    overflow: hidden;
+    background-color: azure;*/
+}
