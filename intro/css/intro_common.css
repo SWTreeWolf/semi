@@ -1,0 +1,335 @@
+html,
+body {
+    height: 100%;
+}
+
+.intro {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.intro .intro_wrap {
+    position: relative;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.intro .intro_wrap .txt_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+}
+
+.intro .txt_wrap .d_t {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.intro .txt_wrap .d_c {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.intro .intro_wrap video {
+    object-fit: fill;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.intro .intro_wrap .av_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+}
+
+#header .btn_menu {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    z-index: 5;
+}
+
+#header .btn_menu .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+}
+
+.content > div {
+    position: relative;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+#header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header {}
+
+#footer {
+    position: relative;
+    text-align: left;
+    max-width: 1920px;
+    margin: 10px auto 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#header .pension {
+    position: fixed;
+    right: 30px;
+    top: 25px;
+    font-size: 36px;
+    color: #644d9d;
+    font-weight: 700;
+    z-index: 300
+}
+
+.intro .txt_wrap .txt01 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 50px;
+    width: 300px;
+    margin: 0 auto;
+    color: white;
+}
+
+.footer_center {
+    position: absolute;
+    top: 30px;
+    right: 120px;
+}
+
+.footer_center > div {
+    float: left;
+    margin-left: 50px;
+}
+
+.question .question_title {
+    font-size: 18px;
+    color: #333;
+    font-weight: 400;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+.question .question_txt {
+    font-size: 28px;
+    color: #333;
+    font-weight: 400;
+}
+
+#footer h2 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+#footer address {
+    font-size: 15px;
+    color: #666;
+    line-height: 24px;
+}
+
+#footer address span {
+    display: block;
+}
+
+.content > div .bg_wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.produce_01 .txt_wrap {
+    position: absolute;
+    bottom: 147px;
+    left: 0;
+    width: 100%;
+}
+
+.produce_01 {
+    height: 900px;
+    overflow: hidden;
+}
+
+.produce_01 .bg_wrap {
+    background-image: url(../images/index_image/main01_visual.jpg);
+}
+
+#btn_top_scroll {
+    position: fixed;
+    right: 50px;
+    bottom: 60px;
+    width: 33px;
+    height: 33px;
+    z-index: 20;
+}
+
+#btn_top_scroll > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.content > .diameter {
+    width : 100%;
+    height: 800px;
+    background-image: url(../images/index_image/bg_02.jpg)
+}
+
+.diameter > div .bg_wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500px;
+    height: 500px;
+}
+
+.diameter > .bg_wrap {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.intro .txt_wrap .obj01 {
+    position: relative;
+    margin-top: 44px;
+    text-align: center;
+}
+
+.intro .txt_wrap .obj02 {
+    position: absolute;
+    bottom : 80px;
+    left : 0;
+    width: 100%;
+    text-align: center;
+}
+
+.diameter .prev {
+    position: absolute;
+    left : 0;
+    top : 0;
+    width: 10%;
+    height: 100%;
+}
+
+.diameter .next {
+    position: absolute;
+    right : 0;
+    top : 0;
+    width: 10%;
+    height: 100%;
+}
+
+div > h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color: #666;
+}
+
+div > p {
+    letter-spacing: 1px;
+    line-height: 200%;
+}
+
+.prev a > img {
+    width: 100%;
+    height: 100%;
+}
+
+.prev > a {
+    position: absolute;
+    top : 25%;
+    display: block;
+    vertical-align: middle;
+    width: 100%;
+    height: 50%;
+}
+
+.next > a {
+    position: absolute;
+    top : 25%;
+    display: block;
+    vertical-align: middle;
+    width: 100%;
+    height: 50%;
+}
+
+.next a > img {
+    width: 100%;
+    height: 100%;
+}
+
+.diameter .txtwrap_01 {
+    display: block;
+    position: absolute;
+    top : 30%;
+    right: 10%;
+    width: 700px;
+    height: 300px;
+}
+
+.diameter .txtwrap_02 {
+    display: none;
+    position: absolute;
+    top : 30%;
+    right: 10%;
+    width: 700px;
+    height: 300px;
+}
+
+.diameter .txtwrap_03 {
+    display: none;
+    position: absolute;
+    top : 30%;
+    right: 10%;
+    width: 700px;
+    height: 300px;
+}
+
+
