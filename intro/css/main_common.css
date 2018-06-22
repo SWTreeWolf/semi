@@ -1,4 +1,5 @@
-html,body{
+html,
+body {
     height: 100%;
 }
 
@@ -6,21 +7,21 @@ html,body{
     height: 200px;
     background-color: #fff;
     border-bottom: 1px solid black;
-    overflow: auto;
+    overflow: inherit;
     background-color: beige;
 }
 
 #logo {
     position: absolute;
-    left : 100px;
-    top : 30px;
+    left: 100px;
+    top: 30px;
     width: 100px;
     height: 100px;
 }
 
 #nav {
     position: absolute;
-    right : 10%;
+    right: 10%;
     margin-top: 30px;
     height: 50px;
     font-size: 14px;
@@ -76,19 +77,60 @@ ul li ul li a {
 }
 
 
-
-section {
-    
-}
-
 #header #logo img {
     width: 100%;
     height: 100%;
 }
 
+#header-bottom {
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    padding: 10px;
+    height: 30px;
+    width: 100%;
+    background-color: #003366;
+    text-align: center;
+}
+
+#header-bottom > #reserve {
+    display: inline-block;
+    text-align: center;
+}
+
+#reserve div {
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+#reserve div input, select {
+    background-color: #004d99;
+    padding: 2px;
+    border: none;
+    position: relative;
+    color: white;
+}
+
+.check-date {
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+
+#check-submit {
+    background-color: orange;
+    padding: 3px;
+    border: none;
+    color: #000066;
+}
+
 #footer {
     position: relative;
-    border-top: 1px solid black;;
+    border-top: 1px solid black;
+    ;
     text-align: left;
     max-width: 1920px;
     margin: 10px auto 0 auto;
@@ -133,3 +175,9 @@ section {
 #footer address span {
     display: block;
 }
+
+ul > #temp {
+    font-size: 18px;
+}
+
+

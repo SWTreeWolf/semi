@@ -3,15 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Main</title>
+    <title></title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main_common.css">
-    <link rel="stylesheet" href="css/content_01.css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/header.js"></script>
+    <script>
+        $(function() {
+            //////////////////////////////날짜선택////////////////////////////////	  
+            $.datepicker.setDefaults({
+                dateFormat: "yy-mm-dd",
+                prevText: '이전 달',
+                nextText: '다음 달',
+                monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], //월 이름
+                monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], //
+                dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                yearSuffix: '년'
+            });
+            $("#dateIn").datepicker({
+                changeYear: false,
+                onClose: function(selectedDate) {
+                    $("#dateOut").datepicker('option', 'minDate', selectedDate);
+                }
+            });
+            $("#dateOut").datepicker({
+                changeYear: false,
+                onClose: function(selectedDate) {
+                    $("#dateIn").datepicker('option', 'maxDate', selectedDate);
+                }
+            });
+
+
+            ////////////////////////////날짜선택/////////////////////////////////////
+        });
+
+    </script>
 </head>
 
 <body>
@@ -30,7 +59,6 @@
                         <li><a href="#">ROOM -C</a></li>
                     </ul>
                 </li>
-                <li id="temp">|</li>
                 <li><a href="#">SPECIALITY</a>
                     <ul>
                         <li><a href="#">POOL</a></li>
@@ -38,23 +66,21 @@
                         <li><a href="#">ETC</a></li>
                     </ul>
                 </li>
-                <li id="temp">|</li>
                 <li><a href="#">SERVICE</a>
                     <ul>
                         <li><a href="#">서비스 안내</a></li>
                     </ul>
                 </li>
-                <li id="temp">|</li>
                 <li><a href="#">VOICE</a>
                     <ul>
                         <li><a href="#">공지사항</a></li>
                         <li><a href="#">이용문의</a></li>
+
                         <li><a href="#">이용후기</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">예약</a></li>
                     </ul>
                 </li>
-                <li id="temp">|</li>
                 <li><a href="#">MAP</a>
                     <ul>
                         <li><a href="#">오시는길</a></li>
@@ -94,25 +120,7 @@
         </div>
         <!-- hedaer-bottom end -->
     </header>
-
-    <!--<section id="content_01">
-        <table></table>
-    </section>-->
-    <footer id="footer">
-        <h2>확인용입니다.</h2>
-        <address>
-            <span>Lorem ipsum dolor sit amet</span>  
-            <span>Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean </span>
-            <span>Copyright (c) 2018 inthehome Inc. All rights reserved.</span>
-       </address>
-
-        <div class="footer_center">
-            <div class="question">
-                <p class="question_title">관련문의</p>
-                <p class="question_txt">000-0000-0000</p>
-            </div>
-        </div>
-    </footer>
+    </header>
 </body>
 
 </html>
