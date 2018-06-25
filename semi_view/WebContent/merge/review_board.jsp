@@ -6,10 +6,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="../merge/css/review_board.css" />
-<!-- 바디 스타일 -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	
 </script>
 <script type="text/javascript" src="../merge/js/js_ex_board.js"></script>
 </head>

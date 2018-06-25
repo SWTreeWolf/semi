@@ -8,11 +8,12 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="../merge/css/reset.css">
 <link rel="stylesheet" href="../merge/css/main_common.css">
+<link rel="stylesheet" href="../merge/css/header_jquery-ui.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="../merge/js/jquery.js"></script>
-<script type="text/javascript" src="../merge/js/jquery-ui.min.js"></script>
-<script type="text/jscript" src="../merge/js/header.js"></script>
+<script type="text/javascript" src="../merge/js/header_jquery.js"></script>
+<script type="text/javascript" src="../merge/js/header_jquery-ui.min.js"></script>
+<script type="text/javascript" src="../merge/js/header.js"></script>
 </head>
 <body>
 	<header id="header">
@@ -57,7 +58,7 @@
 		<div id="header-bottom">
 			<div id="reserve">
 				<!-- 예약 바  -->
-				<form id="reserve-form" method="post" action="">
+				<form id="reserve-form" method="post" action="" autocomplete="off">
 					<div class="check-date">
 						<input type="text" id="dateIn" name="dateIn" placeholder="ARRIVAL">
 					</div>

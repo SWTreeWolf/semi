@@ -30,6 +30,8 @@ public class boardController extends HttpServlet{
 				path="/merge/write_board.jsp";
 			}else if(action.equals("/view_board.do")) {
 				path="/merge/view_board.jsp";
+			}else if(action.equals("/test.do")) {
+				path="/merge/header.jsp";
 			}
 			
 			if(path!="") {

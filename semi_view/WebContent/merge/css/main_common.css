@@ -87,7 +87,7 @@ ul li ul li a {
     top: 150px;
     left: 0px;
     padding: 10px;
-    height: 4%;
+    height: 3%;
     width: 100%;
     background-color: #003366;
     text-align: center;
@@ -182,8 +182,3 @@ ul > #temp {
     font-size: 18px;
 }
 
-
-
-label {
-    
-}
