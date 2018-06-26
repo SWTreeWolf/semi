@@ -7,10 +7,32 @@
     <link rel="stylesheet" href="css/main_common.css">
     <link rel="stylesheet" href="css/content_01.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/header.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -64,14 +86,16 @@
         <div id="header-bottom">
             <div id="reserve">
                 <!-- 예약 바  -->
-                <form id="reserve-form" method="post" action="" autocomplete="off">
+                <form id="reserve-form" method="post" action="">
                     <div class="check-date">
-                        <input type="text" id="dateIn" name="dateIn" placeholder="ARRIVAL">
+                        <input type="text" id="dateIn" name="dateIn" placeholder="ARRIVAL" autocomplete="off">
                     </div>
 
                     <div class="check-date">
-                        <input type="text" id="dateOut" name="dateOut" placeholder="DEPARTURE">
+                        <input type="text" id="dateOut" name="dateOut" placeholder="DEPARTURE" autocomplete="off">
+
                     </div>
+
                     <div class="check-guests">
                         <select name="guests">
 							<option value="1">1</option>
@@ -91,7 +115,26 @@
         </div>
         <!-- hedaer-bottom end -->
     </header>
-
+    <!--contents 시작-->
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/index_image/bg_01.jpg"></div>
+            <div class="swiper-slide"><img src="images/index_image/bg_01.jpg"></div>
+            <div class="swiper-slide"><img src="images/index_image/bg_01.jpg"></div>
+            <div class="swiper-slide"><img src="images/index_image/bg_01.jpg"></div>
+            <div class="swiper-slide"><img src="images/index_image/bg_01.jpg"></div>
+            <div class="swiper-slide"><img src="images/index_image/bg_01.jpg"></div>
+            <div class="swiper-slide"><img src="images/index_image/bg_01.jpg"></div>
+            <div class="swiper-slide"><img src="images/index_image/bg_01.jpg"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    
     <section id="content_01">
         <div class="div_wrap">
             <div>

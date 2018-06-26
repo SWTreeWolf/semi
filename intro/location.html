@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main_common.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/location.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/jscript" src="js/header.js"></script>
+    <script>
+        function initMap() {
+            var uluru = {
+                lat: -22.363,
+                lng: 80.044
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2wV7V-mah5FhOeVAsPthFITqOgZGdUDM&callback=initMap">
+    </script>
 </head>
 
 <body>
@@ -90,6 +108,36 @@
         </div>
         <!-- hedaer-bottom end -->
     </header>
-</body>
+    <section id="location_01">
+        <div id="map_wrap">
+            <div id="map"></div>
+        </div>
+        <div id="txt_wrap">
+            <img src="images/main_image/test_img2.gif" usemap="#loc">
+            <map name="loc" id="loc">
+               <area shape="rect" coords="794,191,881,285" href="http://dmaps.kr/jqsh" target="_blank" />
+               <area shape="rect" coords="539,530,706,559" href="http://tour.yd.go.kr/kor/part/express_bus.aspx?MC=604002" target="_blank" />
+               <area shape="rect" coords="664,191,751,285" href="http://goo.gl/maps/67uJV" target="_blank" />
+               <area shape="rect" coords="529,192,616,286" href="http://me2.do/Gv4XpXpS" target="_blank" />
+               <area shape="rect" coords="717,530,885,560" href="http://tour.yd.go.kr/kor/part/intercity_bus.aspx?MC=604003" target="_blank" />
+               <area shape="rect" coords="539,764,706,797" href="http://www.korail.go.kr/" target="_blank" />
+            </map>
+        </div>
+    </section>
+    <footer id="footer">
+        <h2>확인용입니다.</h2>
+        <address>
+            <span>Lorem ipsum dolor sit amet</span>  
+            <span>Lorem ipsum dolor sit amet consectetuer adipiscing elit. Aenean </span>
+            <span>Copyright (c) 2018 inthehome Inc. All rights reserved.</span>
+       </address>
 
+        <div class="footer_center">
+            <div class="question">
+                <p class="question_title">관련문의</p>
+                <p class="question_txt">000-0000-0000</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

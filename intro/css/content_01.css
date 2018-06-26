@@ -1,10 +1,40 @@
-#content_01 {
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+body {
+    font-family: 'Nanum Barun Gothic', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 50%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide > img {
     width: 100%;
     height: 100%;
-    text-align:center;
+}
+
+#content_01 {
+    width: 100%;
+    height: 1200px;
+    text-align: center;
 }
 
 #content_01 > .div_wrap {
+    margin-top : 50px;
     display: inline-block;
     width: 1200px;
     height: 300px;
@@ -33,7 +63,7 @@ div > #txt_wrap {
     text-decoration: none;
 }
 
-.div_wrap > div > a{
+.div_wrap > div > a {
     display: block;
     margin: auto;
     margin-top: 30px;
@@ -41,18 +71,9 @@ div > #txt_wrap {
 }
 
 #content_01 > #min_board {
+    margin-top: 50px;
     display: inline-block;
     height: 200px;
-    text-align: center;
-}
-
-#min_board > div {
-    display: inline-block;
-    margin-left: 10px;
-    margin-top: 5px;
-    float: left;
-    width: 32%;
-    height: 100%;
     text-align: center;
 }
 
@@ -61,13 +82,13 @@ div > #txt_wrap {
     height: 200px;
 }
 
-td > a{
+td > a {
     text-decoration: none;
     color: black;
 }
 
 td {
-    width:300px;
+    width: 300px;
     height: 21px;
     overflow: hidden;
 }
