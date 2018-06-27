@@ -1,4 +1,19 @@
 $(document).ready(function () {
+    var height = $('.intro').outerHeight();
+
+    $(window).scroll(function () {
+        var win_height = $(this).scrollTop();
+        if (win_height >= height) {
+            $('.produce_01 .txt_wrap').fadeIn(500);
+        } 
+        if (win_height >= height * 2 - 200) {
+            $('.produce_02 .txt_wrap').fadeIn(500);
+        } 
+        if (win_height >= height * 3 - 300) {
+            $('.produce_03 .txt_wrap').fadeIn(500);
+        } 
+    });
+
     $('#btn_top_scroll').on('click', function () {
         $('html, body').animate({
             scrollTop: 0

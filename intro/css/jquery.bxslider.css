@@ -10,25 +10,18 @@
     top: 32%;
     width: 100%;
     margin-bottom: 60px;
-    margin: auto;
     padding: auto;
     *zoom: 1;
     -ms-touch-action: pan-y;
     touch-action: pan-y;
+    transition: top .5s;
 }
 
 @media only screen and (max-width: 1670px) {
     .bx-wrapper {
-        position: absolute;
-        left: 20%;
-        top: 5%;
-        width: 100%;
-        margin-bottom: 60px;
         margin: auto;
-        padding: auto;
-        *zoom: 1;
-        -ms-touch-action: pan-y;
-        touch-action: pan-y;
+        left: 20%;
+        top: 10%;
     }
 }
 

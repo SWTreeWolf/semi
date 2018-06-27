@@ -20,6 +20,7 @@ body {
 }
 
 .intro .intro_wrap .txt_wrap {
+    
     position: absolute;
     top: 0;
     left: 0;
@@ -91,10 +92,9 @@ body {
     width: 100%;
 }
 
-header {}
-
 #footer {
     position: relative;
+    border-top: 1px solid #ccc;
     text-align: left;
     max-width: 1920px;
     margin: 10px auto 0 auto;
@@ -113,10 +113,11 @@ header {}
 }
 
 .intro .txt_wrap .txt01 {
+    text-align: center;
     font-weight: 700;
     font-size: 36px;
     line-height: 50px;
-    width: 300px;
+    width: 350px;
     margin: 0 auto;
     color: white;
 }
@@ -173,13 +174,7 @@ header {}
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
-}
-
-.produce_01 .txt_wrap {
-    position: absolute;
-    bottom: 147px;
-    left: 0;
-    width: 100%;
+    transition: all 1.2s ease;
 }
 
 .produce_01 {
@@ -187,8 +182,53 @@ header {}
     overflow: hidden;
 }
 
+.produce_02 {
+    height: 900px;
+    overflow: hidden;
+}
+
+.produce_03 {
+    height: 900px;
+    overflow: hidden;
+}
+
+.produce_01 .txt_wrap {
+    display: none;
+    position: absolute;
+    bottom: 147px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.produce_02 .txt_wrap {
+    display: none;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 100%;
+    text-align: right;
+}
+
+.produce_03 .txt_wrap {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 100%;
+    text-align: left;
+}
+
 .produce_01 .bg_wrap {
-    background-image: url(../images/index_image/main01_visual.jpg);
+    background-image: url(../images/index_image/main_01.jpg);
+}
+
+.produce_02 .bg_wrap {
+    background-image: url(../images/index_image/main_02.jpg);
+}
+
+.produce_03 .bg_wrap {
+    background-image: url(../images/index_image/main_03.jpg);
 }
 
 #btn_top_scroll {
@@ -209,7 +249,6 @@ header {}
 .content > .diameter {
     width: 100%;
     height: 800px;
-    background-image: url(../images/index_image/bg_02.jpg)
 }
 
 .diameter > div .bg_wrap {
@@ -228,11 +267,6 @@ header {}
 
 
 
-.intro .txt_wrap .obj01 {
-    position: relative;
-    margin-top: 44px;
-    text-align: center;
-}
 
 .intro .txt_wrap .obj02 {
     position: absolute;
@@ -302,6 +336,12 @@ div > p {
     height: 100%;
 }
 
+.diameter .diameter_bxslider{
+    position: relative;
+    display: block;
+    width : 700px;
+}
+
 .diameter .txtwrap_01 {
     display: block;
     position: absolute;
@@ -309,6 +349,7 @@ div > p {
     right: 10%;
     width: 700px;
     height: 300px;
+    transition: right .5s;
 }
 
 .diameter .txtwrap_02 {
@@ -329,36 +370,62 @@ div > p {
     height: 300px;
 }
 
-@media only screen and (max-width: 1670px) {
-    .diameter .txtwrap_01 {
-        display: block;
-        position: absolute;
-        top : 50%;
-        right: 10%;
-        width: 700px;
-        height: 300px;
-    }
-
-    .diameter .txtwrap_02 {
-        display: none;
-        position: absolute;
-        top : 50%;
-        right: 10%;
-        width: 700px;
-        height: 300px;
-    }
-
-    .diameter .txtwrap_03 {
-        display: none;
-        position: absolute;
-        top : 50%;
-        right: 10%;
-        width: 700px;
-        height: 300px;
-    }
-}
-
 #map {
     width: 100%;
     height: 400px;
 }
+
+.txt01 {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 100;
+    line-height: 44px;
+}
+
+.txt02 {
+    font-size: 18px;
+    color: #fff;
+    line-height: 26px;
+    padding-top: 12px;
+}
+
+.txt03 {
+    font-size: 18px;
+    color: #fff;
+    line-height: 26px;
+    padding-top: 12px;
+}
+
+@media only screen and (max-width: 1670px) {
+    .content > .diameter {
+        text-align: center;
+    }
+    .diameter .txtwrap_01 {
+        margin: auto;
+        position: relative;
+        text-align: left;
+        display: block;
+        top: 50%;
+        right: 0;
+    }
+
+    .diameter .txtwrap_02 {
+        margin: auto;
+        position: relative;
+        text-align: left;
+        display: none;
+        top: 50%;
+        right: 0;
+    }
+
+    .diameter .txtwrap_03 {
+        margin: auto;
+        position: relative;
+        text-align: left;
+        display: none;
+        top: 50%;
+        right: 0;
+    }
+}
+
+
