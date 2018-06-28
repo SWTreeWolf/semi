@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 1700px;
+	height: 1200px;
+}
+
+#calendar-wrapper {
+	position: relative;
+	float: left;
+}
+
+#calendar {
+	width: 850px;
+	height: 700px;
+	margin: 20px 50px;
+}
+
+#color-description {
+	height: 300px;
+	margin-left: 50px;
+}
+
+.color-bar {
+	text-align: center;
+	color: white;
+	width: 129px;
+	border-radius: 4px;
+	float: left;
+	margin-left: 10px;
+	padding: 3px;
+}

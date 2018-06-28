@@ -1,0 +1,114 @@
+* {
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+#cal {
+	width: 20px;
+	height: 20px;
+}
+
+h2 {
+	margin-top: -15px;
+	margin-left: 40%;
+}
+
+.sub-line {
+	height: 3px;
+	width: 183px;
+	background-color: #003366;
+	margin-left: 42%;
+	margin-top: 4px;
+}
+
+#room-list {
+	width: 800px;
+	height: 1000px;
+	margin-top: 40px;
+	margin-left: 195px;
+}
+
+.room {
+	border-radius: 5px;
+	width: 800px;
+	height: 300px;
+	margin-bottom: 70px;
+	margin-left: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.reserve-btn a {
+	background-color: orange;
+	color: #003366;
+	text-decoration: none;
+	width: 153px;
+	height: 50px;
+	font-size: 25px;
+	line-height: 50px;
+	text-align: center;
+	position: relative;
+	left: 40px;
+	float: left;
+}
+
+.reserve-btn p {
+	color: #003366;
+	text-decoration: none;
+	width: 300px;
+	height: 50px;
+	font-size: 25px;
+	line-height: 50px;
+	text-align: center;
+	position: relative;
+	left: 30px;
+	text-align: right;
+	float: left;
+}
+
+.reserve-btn a:hover {
+	background-color: #cc6600;
+}
+
+.img {
+	width: 290px;
+	height: 260px;
+	background-color: pink;
+	float: left;
+	z-index: 1;
+	top: 19px;
+	left: 18px;
+	position: relative;
+}
+
+dl {
+	position: relative;
+	top: 25px;
+	left: 35px;
+	width: 750px;
+	height: 240px;
+}
+
+dt {
+	font-size: 30px;
+	color: #e45252;
+	margin-bottom: 10px;
+}
+
+dd a {
+	color: #003366;
+}
+
+#no-room-list {
+	margin: 0 auto;
+}
+
+#no-room-list img {
+	width: 250;
+	height: 250px;
+	margin: 137px 0 0 40%;
+}
+
+#no-room-list p {
+	margin: 50px 0 0 34%;
+	font-size: 27px;
+}

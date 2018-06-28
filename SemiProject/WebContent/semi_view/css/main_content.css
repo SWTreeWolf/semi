@@ -1,0 +1,111 @@
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+body {
+    font-family: 'Nanum Barun Gothic', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 50%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide > img {
+    width: 100%;
+    height: 100%;
+}
+
+#content_01 {
+    width: 100%;
+    height: 800px;
+    text-align: center;
+}
+
+#content_01 > .div_wrap {
+    display: inline-block;
+    margin-top : 50px;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+
+.div_wrap div {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 23%;
+    height: 99%;
+    text-align: center;
+}
+
+div > #txt_wrap {
+    display: block;
+    margin-top: 10px;
+    color: #babfc6;
+}
+
+#learnMore {
+    display: inline-block;
+    color: #a1b0ba;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.div_wrap > div > a {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#content_01 > #min_board {
+    margin-top: 50px;
+    display: inline-block;
+    height: 200px;
+    text-align: center;
+}
+
+.voice {
+    width: 500px;
+    height: 200px;
+}
+
+td > a {
+    text-decoration: none;
+    color: black;
+}
+
+#min_board table td {
+    width: 300px;
+    height: 21px;
+    overflow: hidden;
+}
+
+#m_img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.notice {
+    width: 500px;
+    height: 200px;
+}
+
+.board {
+    width: 500px;
+    height: 200px;
+}
+
