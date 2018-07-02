@@ -1,0 +1,60 @@
+#reserveListView-wrapper {
+	float: left;
+	margin: 50px 130px;
+}
+
+#reserveListView {
+	border-top: 2px solid grey;
+	border-bottom: 2px solid grey;
+	width: 800px;
+	height: 870px;
+}
+
+#resrveSubejct {
+	height: 30px;
+	line-height: 30px;
+	margin-top: 20px;
+	border-bottom: 1px dotted grey;
+	border-top: 1px solid grey;
+}
+
+#resrveSubejct #subName {
+	text-align: center;
+	margin-left: 350px;
+}
+
+#resrveSubejct #subNum {
+	text-align: right;
+	margin-left: 270px;
+}
+
+#reserveViewTable, #personViewTable {
+	margin-left: 40px;
+}
+
+#reserveViewTable, #personViewTable, #personViewTable th,
+	#reserveViewTable th, #personViewTable td, #reserveViewTable td {
+	border: 1px solid grey;
+	border-collapse: collapse;
+	width: 700px;
+	height: 50px;
+}
+
+#reserveViewTable th, #personViewTable th {
+	background-color: lightgrey;
+}
+
+#reserveViewTable td, #personViewTable td {
+	width: 700px;
+}
+
+#contentTr {
+	height: 400px;
+}
+
+#reserveReturnBtn {
+	width: 150px;
+	height: 30px;
+	margin: 0 0 19px;
+}
+
