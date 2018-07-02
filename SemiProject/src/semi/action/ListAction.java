@@ -50,12 +50,13 @@ public class ListAction {
 				obj.put("stay", stay);
 				obj.put("dateIn",dateIn);
 				obj.put("dateOut", dateOut);
-				obj.put("r_num", guests);
+				obj.put("guests", guests);
 				arr.add(obj);
 			}
 			resp.setContentType("text/json;charset=utf-8");
 			resp.getWriter().print(arr);
 		}//end else
 		
-	}//end execute()
-}//end class
+	}
+	
+}

@@ -32,8 +32,9 @@ public class CalendarAction {
 			obj.put("l_dateOutM", l_dateOut[1]);
 			obj.put("l_dateOutD", l_dateOut[2]);
 			obj.put("p_num", lis.getP_num());
+			obj.put("p_name", lis.getP_name());
 			obj.put("r_num", lis.getR_num());
-			obj.put("r_total", lis.getR_total());
+			obj.put("r_total",lis.getR_total());
 			obj.put("l_tipNum", lis.getL_tipNum());
 			obj.put("yes", lis.getYes());
 			arr.add(obj);

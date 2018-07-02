@@ -6,15 +6,14 @@ body {
 #header {
     position: relative;
     width: 100%;
-    height: 200px;
-    border-bottom: 1px solid black;
+    height: 120px;
     overflow: inherit;
 }
 
 #logo {
     position: absolute;
     left: 100px;
-    top: 30px;
+    top: 10px;
     width: 100px;
     height: 100px;
 }
@@ -70,6 +69,10 @@ ul li ul li a {
     background-color: #003366;
 }
 
+#nav > ul > li:hover{
+	border:none;
+}
+
 #nav ul li:hover a {
     background-color: #003366;
     color: white;
@@ -92,13 +95,16 @@ ul li ul li a {
 
 #header-bottom {
     position: absolute;
-    top: 150px;
+    top: 120px;
     left: 0px;
     padding: 10px 0;
     height: 30px;
     width: 100%;
-    background-color: #003366;
+    background-color: #ffffff94;
     text-align: center;
+       border-top: 1px solid darkgrey;
+    border-bottom: 1px solid darkgrey;
+    z-index: 2;
 }
 
 #header-bottom > #reserve {
@@ -165,7 +171,7 @@ ul > #temp {
     display: inline-block;
     left: 0;
     top: 0;
-    width: 150px;
+    width: 13%;
     height: 150px;
 }
 

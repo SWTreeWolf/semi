@@ -33,14 +33,31 @@ CREATE TABLE Person
    PRIMARY KEY (p_num)
 );
 
+create table noticeboard(
+   	num number constraint semiboard_num_pk primary key,
+   	readcount number default 0, 
+   	writer varchar2(30),
+	subject varchar2(50),
+	summernote varchar2(1000),
+	reg_date date,
+	ref number,
+	re_step number,
+	re_level number,
+	upload varchar2(300)
+);
+
 select * from Reservation
 select * from person
 select * from room
+
+select * from noticeboard
 
 /* Drop Tables */
 DROP TABLE Reservation CASCADE CONSTRAINTS;
 DROP TABLE Person CASCADE CONSTRAINTS;
 DROP TABLE Room CASCADE CONSTRAINTS;
+
+DROP TABLE noticeboard CASCADE CONSTRAINTS;
 
 /* Delete colums*/
 delete from reservation;
@@ -64,9 +81,15 @@ increment by 1
 nocache
 nocycle;
 
-drop sequence person_seq
-drop sequence reserv_seq
-drop sequence room_seq
+create sequence noticeboard_seq 
+start with 1 
+increment by 1
+nocache
+nocycle;
+
+drop sequence person_seq;
+drop sequence reserv_seq;
+drop sequence room_seq;
 
 /* Create Foreign Keys */
 
@@ -89,6 +112,8 @@ insert into Reservation values(reserv_seq.nextval,TO_DATE('2018-06-30','YYYY-MM-
 insert into Reservation values(reserv_seq.nextval,TO_DATE('2018-06-01','YYYY-MM-DD'),TO_DATE('2018-06-09','YYYY-MM-DD'),3,2,47534,620000,0);
 insert into Reservation values(reserv_seq.nextval,TO_DATE('2018-06-05','YYYY-MM-DD'),TO_DATE('2018-06-08','YYYY-MM-DD'),4,3,78347,250000,1);
 
+select r.*,p.p_name from reservation r, person p where r.l_tipNum=p.l_tipNum
+
 /* room */
 insert into room values(room_seq.nextval,'조명이 있는방',90000,4,'정말정말 좋은방이에요^^ 너무너무너무 ㅠㅠㅠㅠㅠㅠㅠ흐흐그흐ㅡㄱ흐그흑');
 insert into room values(room_seq.nextval,'경치가 아름다운 방',120000,5,'비싸지만 좋은방입니다^^^^^6ㅇㅇㅅㅇㅅㅇㅅㅇㅅ케케케케케');
@@ -97,10 +122,16 @@ insert into room values(room_seq.nextval,'아름다운 디자인의 방',200000,
 insert into room values(room_seq.nextval,'바다가 보이는 방',200000,5,'정말 좋은방입니다 추천해요 뭐가좋냐면... ㅎㅎㅎㅎ');
 
 /* person */
-insert into person values('미나',person_seq.nextval,'444','ㅇㅇ','ㅇ',12345,'ㅇㅇ','ㅇㅇ');
-insert into person values('츄츄',person_seq.nextval,'444','ㅇㅇ','ㅇ',12345,'ㅇㅇ','ㅇㅇ');
-insert into person values('키키',person_seq.nextval,'444','ㅇㅇ','ㅇ',12345,'ㅇㅇ','ㅇㅇ');
-insert into person values('미미',person_seq.nextval,'444','ㅇㅇ','ㅇ',12345,'ㅇㅇ','ㅇㅇ');
+insert into person values('미나',person_seq.nextval,'444','ㅇㅇ','ㅇ',78977,'ㅇㅇ','ㅇㅇ');
+insert into person values('츄츄',person_seq.nextval,'444','ㅇㅇ','ㅇ',55631,'ㅇㅇ','ㅇㅇ');
+insert into person values('키키',person_seq.nextval,'444','ㅇㅇ','ㅇ',47534,'ㅇㅇ','ㅇㅇ');
+insert into person values('미미',person_seq.nextval,'444','ㅇㅇ','ㅇ',78347,'ㅇㅇ','ㅇㅇ');
+
+/* notice */
+insert into noticeboard
+values(noticeboard_seq.nextval,0,'한상빈','제목1','내용테스트',sysdate,semiboard_seq.nextval,0,0,'sample.txt');
+
+
 
 /*6월6일의 매출*/
 select sum(round(r_total/(l_dateout-l_datein))) from res where l_datein <= TO_DATE('2018-06-06','YYYY-MM-DD') and
@@ -109,9 +140,9 @@ l_dateout >= TO_DATE('2018-06-06','YYYY-MM-DD')
 select r_total,r_num from res where l_datein >= TO_DATE('2018-06-01','YYYY-MM-DD')  
 l_dateout <= TO_DATE('2018-06-30','YYYY-MM-DD') 
 
-delete from room
-
-
+delete from room;
+delete from reservation;
+delete from person;
 
 SELECT *
 FROM room 

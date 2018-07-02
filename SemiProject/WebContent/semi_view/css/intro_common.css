@@ -248,7 +248,7 @@ body {
 
 .content > .diameter {
     width: 100%;
-    height: 800px;
+    height: 900px;
 }
 
 .diameter > div .bg_wrap {
@@ -264,9 +264,6 @@ body {
     height: 100%;
     text-align: center;
 }
-
-
-
 
 .intro .txt_wrap .obj02 {
     position: absolute;
@@ -336,38 +333,17 @@ div > p {
     height: 100%;
 }
 
-.diameter .diameter_bxslider{
+.diameter .swiper-container{
     position: relative;
     display: block;
+    top:5%;
     width : 700px;
+    height: auto;
 }
 
-.diameter .txtwrap_01 {
-    display: block;
-    position: absolute;
-    top: 30%;
-    right: 10%;
-    width: 700px;
-    height: 300px;
-    transition: right .5s;
-}
-
-.diameter .txtwrap_02 {
-    display: none;
-    position: absolute;
-    top: 30%;
-    right: 10%;
-    width: 700px;
-    height: 300px;
-}
-
-.diameter .txtwrap_03 {
-    display: none;
-    position: absolute;
-    top: 30%;
-    right: 10%;
-    width: 700px;
-    height: 300px;
+.diameter .swiper-slide > img {
+    width: 100%;
+    height: 100%;
 }
 
 #map {
@@ -395,37 +371,3 @@ div > p {
     line-height: 26px;
     padding-top: 12px;
 }
-
-@media only screen and (max-width: 1670px) {
-    .content > .diameter {
-        text-align: center;
-    }
-    .diameter .txtwrap_01 {
-        margin: auto;
-        position: relative;
-        text-align: left;
-        display: block;
-        top: 50%;
-        right: 0;
-    }
-
-    .diameter .txtwrap_02 {
-        margin: auto;
-        position: relative;
-        text-align: left;
-        display: none;
-        top: 50%;
-        right: 0;
-    }
-
-    .diameter .txtwrap_03 {
-        margin: auto;
-        position: relative;
-        text-align: left;
-        display: none;
-        top: 50%;
-        right: 0;
-    }
-}
-
-

@@ -24,8 +24,9 @@
 	<div id="reserve-form-wrapper-wrapper">
 		<div id="reserve-form-wrapper">
 			<div class="reserveForm" id="reserve1">
-				<h1 class="subject">객실정보</h1>
-				<div class="sub-line"></div>
+
+				<h1 class="subject">객실정보<div class="sub-line"></div></h1>
+	
 				<div id="reserve1-top">
 					<div id="img">
 						<c:if test="${param.r_num==1}">
@@ -128,26 +129,29 @@
 					</div>
 					<!--amenity end -->
 					<div id="facility">
-						<p>침대/침구</p>
+						<p>침대/가구</p>
+						
 						<div class="facil">
 							<p>
 								<img class="facilimg" src="../semi_view/images/main_image/lilbed.png" />
 							</p>
 							1번침실</br>더블침대 1개
 						</div>
+						<c:if test="${param.r_num>=3}">
 						<div class="facil">
 							<p>
 								<img class="facilimg" src="../semi_view/images/main_image/lilbed.png" />
 							</p>
-							1번침실</br>더블침대 1개
+							2번침실</br>더블침대 1개
 						</div>
+						</c:if>
 						<div class="facil">
 							<p>
-								<img class="facilimg" src="../semi_view/images/main_image/lilbed.png" />
+								<img class="facilimg" src="../semi_view/images/main_image/armchair.png" />
 							</p>
-							1번침실</br>더블침대 1개
+							거실</br>소파 1개
 						</div>
-
+						
 					</div>
 					<!--facility end -->
 				</div>
@@ -165,8 +169,8 @@
 			<!--------------------------------reserve1 end---------------------------------------->
 
 			<div class="reserveForm" id="reserve2">
-				<h1 class="subject">유의사항</h1>
-				<div class="sub-line"></div>
+				<h1 class="subject">유의사항<div class="sub-line"></div></h1>
+				
 
 				<div id="warning">
 					<h3>자동 예약취소 안내</h3>
@@ -201,9 +205,9 @@
 
 
 			<div class="reserveForm" id="reserve3">
-				<h1 class="subject">예약하기</h1>
-				<div class="sub-line"></div>
-				<form action="reserve.pen" method="post">
+				<h1 class="subject">예약하기<div class="sub-line"></div></h1>
+			
+				<form action="reserveRequest.do" method="post">
 					<div id="writing">
 						<div id="reserveInfo">
 							<h2>예약정보</h2>
@@ -251,7 +255,7 @@
 							</p>
 							<p>
 								<input type="text" class="write" name="p_address"
-									placeholder="주소" autocomplete="off" />
+									placeholder="주소" autocomplete="off" /><span class="as">&nbsp;</span>
 							</p>
 						</div>
 						<!-- end personInfo -->
@@ -321,5 +325,6 @@
 		<!-- reserve wrapper end -->
 	</div>
 	<!-- reserve-form-wrapper-wrapper end -->
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

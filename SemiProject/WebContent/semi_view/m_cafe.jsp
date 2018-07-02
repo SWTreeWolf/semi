@@ -23,20 +23,17 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	<section id="contents">
 		<div id="cafe_01">
-			<img src="../semi_view/images/main_image/s_img1.jpg">
-		</div>
-		<div id="cafe_02">
-			<img src="../semi_view/images/main_image/s_img5.jpg" id="p_1"> <img
-				src="../semi_view/images/main_image/s_img5.jpg" id="p_2">
-		</div>
-		<div id="cafe_03">
-			<img src="../semi_view/images/main_image/s_img5.jpg" id="p_1"> <img
-				src="../semi_view/images/main_image/s_img5.jpg" id="p_2">
-		</div>
-		<div id="cafe_04">
-			<img src="../semi_view/images/main_image/s_img5.jpg" id="p_1"> <img
-				src="../semi_view/images/main_image/s_img5.jpg" id="p_2">
-		</div>
+            <img src="../semi_view/images/main_image/s34_img1.jpg">
+        </div>
+        <div id="cafe_02">
+            <img src="../semi_view/images/main_image/s34_img2.jpg">
+        </div>
+        <div id="cafe_03">
+            <img src="../semi_view/images/main_image/s34_img3.jpg">
+        </div>
+        <div id="cafe_04">
+            <img src="../semi_view/images/main_image/s34_txt1.gif">
+        </div>
 	</section>
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>

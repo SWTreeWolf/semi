@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<meta charset="UTF-8">
 <header id="header">
 	<h1 id="logo">
-		<a href="main.do"><img src="../semi_view/images/main_image/LIN-logo.png"></a>
+		<a href="main.do"><img
+			src="../semi_view/images/main_image/logo.png"></a>
 	</h1>
 	<nav id="nav">
 		<ul>
@@ -11,16 +11,17 @@
 			<li><a href="intro.do">SIDE ROOM</a>
 				<ul>
 					<li><a href="intro.do">preview</a></li>
-					<li><a href="room_templet.html">ROOM -A</a></li>
-					<li><a href="room_templet.html">ROOM -B</a></li>
-					<li><a href="room_templet.html">ROOM -C</a></li>
+					<li><a href="room_templet.html">ROOM -1</a></li>
+					<li><a href="room_templet.html">ROOM -2</a></li>
+					<li><a href="room_templet.html">ROOM -3</a></li>
+					<li><a href="room_templet.html">ROOM -4</a></li>
+					<li><a href="room_templet.html">ROOM -5</a></li>
 				</ul></li>
 
 			<li><a href="pool.do">SPECIALITY</a>
 				<ul>
 					<li><a href="pool.do">POOL</a></li>
 					<li><a href="cafe.do">CAFE</a></li>
-					<li><a href="#">ETC</a></li>
 				</ul></li>
 
 			<li><a href="service.do">SERVICE</a>
@@ -30,11 +31,12 @@
 
 			<li><a href="question.do">VOICE</a>
 				<ul>
-					<li><a href="#">공지사항</a></li>
+					<li><a href="noticelist.do">공지사항</a></li>
 					<li><a href="#">이용문의</a></li>
 					<li><a href="#">이용후기</a></li>
 					<li><a href="question.do">FAQ</a></li>
-					<li><a href="#">예약</a></li>
+					<li><a href="myReserve.do">나의 예약 찾기</a></li>
+					<li><a href="mg_reserveList.do">관리자페이지</a></li>
 				</ul></li>
 
 			<li><a href="map.do">MAP</a>
@@ -46,7 +48,7 @@
 	<div id="header-bottom">
 		<div id="reserve">
 			<!-- 예약 바  -->
-			<form id="reserve-form" method="post" action="list.pen">
+			<form id="reserve-form" method="post" action="emptyRoomList.do">
 				<div class="check-date">
 					<input type="text" id="dateIn" name="dateIn" placeholder="ARRIVAL"
 						autocomplete="off">

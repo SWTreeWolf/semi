@@ -11,7 +11,16 @@ public class ReservationDTO {
 		private int r_total;
 		private int l_tipNum;
 		private int yes;
+		private String p_name; //join하고 가져오기
 
+		
+		
+		public String getP_name() {
+			return p_name;
+		}
+		public void setP_name(String p_name) {
+			this.p_name = p_name;
+		}
 		public int getP_num() {
 			return p_num;
 		}

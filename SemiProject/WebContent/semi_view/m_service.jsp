@@ -19,6 +19,7 @@
 <script type="text/jscript" src="../semi_view/js/header.js"></script>
 <style>
 #service {
+	margin-top:4%;
 	width: 100%;
 	text-align: center;
 }

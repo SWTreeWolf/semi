@@ -4,69 +4,82 @@
 }
 
 body {
-	width: 1400px;
-	height: 1200px;
+	width: 1840px;
+	height: 2600px;
 	overflow: auto;
 }
 
 .v {
 	position: relative;
-	left: 500px;
+	text-align: center;
+	    top: 50px;
 }
-
-#reserve1V {
-	
-}
-
 #reserve2V {
-	top: 60px;
+	margin-top: 60px;
+}
+
+#reserve-form-wrapper-wrapper {
+      height: 2800px;
 }
 
 #reserve-form-wrapper {
-	width: 1400px;
-	height: auto;
-	position: absolute;
-	padding: 40px;
-	margin-top: -50px;
+	position: relative;
+	margin-top: 2%;
+	width: 100%;
+	height: 1800px; /*height : 800px*/
+	text-align: center;
 }
 
 .reserveForm {
-	padding: 10px;
-	height: 850px;
-	margin-left: 30px;
+	height: 790px;
+	text-align: center;
 }
 
 .subject {
-	font-size: 30px;
-	margin-left: 35%;
+		font-size: 30px;
+    margin-top: 120px;
 }
 
 .sub-line {
 	height: 3px;
 	width: 149px;
 	background-color: orange;
-	margin-left: 34%;
+	margin: auto;
+}
+
+#reserve1{
+	margin-top:130px;
+}
+#reserve2{
+	
+}
+#reserve3 {
+	margin-left: 10px;
+	height: 740px;
+	text-align: center;
 }
 
 #reserve1-top {
-	width: 1400px;
+	width: 100%;
 	margin-top: 60px;
-	margin-left: 20px;
+}
+
+div#img {
+	display: inline-block;
 }
 
 #img img {
 	width: 360px;
 	height: 340px;
-	float: left;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
 		rgba(0, 0, 0, 0.19);
 }
 
 #description {
+	display: inline-block;
 	width: 600px;
 	height: 340px;
 	margin-left: 60px;
-	float: left;
 	border-radius: 5px;
 	overflow: auto;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
@@ -79,27 +92,29 @@ body {
 }
 
 #description dt {
+	text-align: left;
 	font-size: 20px;
 }
 
 #description dd {
+	text-align: left;
 	font-size: 15px;
 	margin-bottom: 30px;
 }
 
 #reserve1-bottom {
-	margin-left: 30px;
+	display: inline-block;
+	position: relative;
+	margin: 30px auto 0 auto;
 	width: 100%;
 	height: 200px;
-	clear: left;
-	position: relative;
-	top: 30px;
 }
 
 #amenity {
-	clear: left;
-	width: 450;
-	float: left;
+    display: inline-block;
+    width: 33%;
+    margin-left: 70px;
+    height: 300px;
 }
 
 .amenity-col {
@@ -111,9 +126,10 @@ body {
 }
 
 #amenity div {
-	margin-bottom: 10px;
-	height: 30px;
-	width: 230px;
+    margin: 10px auto;
+    height: 30px;
+    width: 50%;
+    text-align: left;
 }
 
 .limg {
@@ -122,9 +138,9 @@ body {
 }
 
 #facility {
-	width: 800px;
+	display: inline-block;
+	width: 40%;
 	height: 300px;
-	float: left;
 }
 
 #facility .facil {
@@ -169,12 +185,12 @@ body {
 }
 
 #reserve2 #warning {
-	margin: 20px 210px;
+	margin: 3% auto 0 auto;
 	border: 1px solid black;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
-		rgba(0, 0, 0, 0.19);
 	width: 580px;
 	height: 500px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
 	padding: 30px 40px 30px 50px;
 }
 
@@ -188,25 +204,21 @@ body {
 	margin-bottom: 10px;
 }
 
-#reserve3 {
-	height: 740px;
-	margin-left: 10px;
-}
 
 #reserve3 #writing {
 	position: relative;
-	top: 70px;
+	margin-top: 70px;
 }
 
 #reserve3 input {
-	font-size: 20px;
-	height: 46px;
-	width: 300px;
+	position: relative;
 	border: none;
 	border-bottom: 1px solid black;
 	margin-top: 20px;
 	top: 20px;
-	position: relative;
+	font-size: 20px;
+	width: 300px;
+	height: 46px;
 }
 
 #reserve3 input.write {
@@ -218,9 +230,10 @@ body {
 }
 
 #reserveInfo {
-	float: left;
-	height: 500px;
+	display: inline-block;
+	    height: 500px;
 	width: 390px;
+	text-align: left;
 }
 
 #reserveInfo h4 {
@@ -231,29 +244,35 @@ body {
 
 #personInfo {
 	position: relative;
-	float: left;
+	display: inline-block;
+	vertical-align: top;
 	height: 500px;
-	width: 360px;
+	    width: 400px;
 	left: 2%;
+	text-align: left;
 }
 
 #payInfo {
-	position: relative;
-	float: left;
-	left: 4%;
-	height: 500px;
-	width: 390px;
+position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 500px;
+    width: 380px;
+    left: 4%;
+    text-align: left;
 }
 
 #reserveInfo textarea {
+	display: inline-block;
 	margin-top: 45px;
-	margin-left: -2px;
 	border: 1px solid black;
 	border-radius: 10px;
 	padding: 10px;
+	width:85%;
 }
 
 .as {
+	vertical-align: bottom;
 	color: red;
 	margin: 10px;
 	font-size: 25px;
@@ -262,11 +281,11 @@ body {
 }
 
 #reserve3 td {
-	border-bottom: 2px solid wheat;
-	width: 350px;
-	height: 65px;
-	position: relative;
-	border-bottom-style: dotted;
+    border-bottom: 2px dotted wheat;
+    width: 350px;
+    height: 65px;
+    vertical-align: bottom;
+    position: relative;
 }
 
 #reserve3 table span {
@@ -286,7 +305,7 @@ body {
 
 #payInfo #cardImg {
 	margin-top: 20px;
-	width: 300px;
+	width: 85%;
 	height: 50px;
 }
 
@@ -295,6 +314,10 @@ body {
 	width: 20px;
 	display: inline-block;
 	border: 1px solid blue;
+}
+
+#reserveInfo,#personInfo{
+border-right:2px dotted lightgrey;
 }
 
 #payInfo .check {
@@ -306,6 +329,7 @@ body {
 #payInfo label {
 	margin-right: 15px;
 }
+
 
 .radio {
 	width: 15px !important;

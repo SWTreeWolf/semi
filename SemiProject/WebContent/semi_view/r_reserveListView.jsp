@@ -14,14 +14,16 @@
 <script type="text/javascript" src="../semi_view/js/jquery.js"></script>
 <script type="text/javascript" src="../semi_view/js/jquery-ui.min.js"></script>
 <script type="text/jscript" src="../semi_view/js/header.js"></script>
+
 </head>
 <body>
 	<jsp:include page="header.jsp" />
 	<div id="reserveListView-wrapper">
-		<button id="reserveReturnBtn" href="">예약목록으로 돌아가기</button>
+		<a id="reserveReturnBtn" href="managerReserveList.do">예약목록으로 돌아가기</a>
 		<div id="reserveListView">
 			<div id="resrveSubejct">
-				<span id="subName">미나님의 예약</span> <span id="subNum">번호: 1</span>
+				<span id="subName">${pdto.p_name}님의 예약</span> <span id="subNum">번호:
+					1</span>
 			</div>
 			<table id="reserveViewTable">
 				<caption>예약정보</caption>
@@ -33,9 +35,9 @@
 				</tr>
 				<tr>
 					<th>입실일자</th>
-					<td>${rdto.l_datein}</td>
+					<td>${rdto.l_dateIn}</td>
 					<th>퇴실일자</th>
-					<td>${rdto.l_dateout}</td>
+					<td>${rdto.l_dateOut}</td>
 				</tr>
 				<tr>
 					<th>객실번호</th>
@@ -47,14 +49,15 @@
 					<th>총 지불 금액</th>
 					<td>${rdto.r_total}</td>
 					<th>지불상태</th>
-					<td>${rdto.yes}</td>
+					<td><c:if test="${rdto.yes==0}">입금대기</c:if>
+						<c:if test="${rdto.yes==1}">입금완료</c:if></td>
 				</tr>
 
 			</table>
 			<table id="personViewTable">
 				<caption>예약자 상세정보</caption>
 				<tr>
-					<th>예약자 번호</th>
+					<th>예약자 이름</th>
 					<td>${pdto.p_num}</td>
 					<th>전화번호</th>
 					<td>${pdto.p_phoneNumber}</td>
@@ -71,9 +74,9 @@
 				</tr>
 				<tr id="contentTr">
 					<th>고객 요청사항</th>
-					<td colspan=3>${pdto.p_contents}키키키키코코ㅗㅗ콬이이이이ㅣ이오오오오오이이잉이이잉
-						키키키키코코ㅗㅗ콬이이이이ㅣ이오오오오오이이잉이이잉키키키키코코ㅗㅗ콬이이이이ㅣ이오오오오오이이잉이이잉키키키키코코ㅗㅗ콬이이이이ㅣ이오오오오오이이잉이이잉
-						키키키키코코ㅗㅗ콬이이이이ㅣ이오오오오오이이잉이이잉키키키키코코ㅗㅗ콬이이이이ㅣ이오오오오오이이잉이이잉ㅍ키키키키코코ㅗㅗ콬이이이이ㅣ이오오오오오이이잉이이잉</td>
+					<td colspan=3><c:if test="${pdto.p_contents==null}">요청사항 없음</c:if>
+						<c:if test="${pdto.p_contents!=null}"> ${pdto.p_contents} </c:if>
+					</td>
 				</tr>
 			</table>
 

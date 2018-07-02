@@ -6,6 +6,7 @@ body {
 
 #answer {
 	position: relative;
+	margin-top:4%;
 	width: 100%;
 	height: auto;
 }

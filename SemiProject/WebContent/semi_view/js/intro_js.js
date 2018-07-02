@@ -5,13 +5,13 @@ $(document).ready(function () {
         var win_height = $(this).scrollTop();
         if (win_height >= height) {
             $('.produce_01 .txt_wrap').fadeIn(500);
-        } 
+        }
         if (win_height >= height * 2 - 200) {
             $('.produce_02 .txt_wrap').fadeIn(500);
-        } 
+        }
         if (win_height >= height * 3 - 300) {
             $('.produce_03 .txt_wrap').fadeIn(500);
-        } 
+        }
     });
 
     $('#btn_top_scroll').on('click', function () {
@@ -19,13 +19,6 @@ $(document).ready(function () {
             scrollTop: 0
         }, 400);
         return false;
-    });
-
-    var myslider = $('.diameter_bxslider').bxSlider({
-        mode: 'fade',
-        captions: true,
-        pager: false,
-        slideWidth: 500
     });
 
     $('.obj01').on('click', function () {
@@ -39,43 +32,21 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.prev_btn').click(function () {
-        myslider.goToPrevSlide();
-        ddiv();
-        return false;
-    })
-
-    $('.next_btn').click(function () {
-        myslider.goToNextSlide();
-        ddiv();
-        return false;
-    })
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay:{
+        	delay: 3000
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
 
     $('#map').initMap;
-
-    function ddiv() {
-        var curr = myslider.getCurrentSlide();
-        switch (curr) {
-            case 0:
-                $('.txtwrap_01').css('display', 'block');
-                $('.txtwrap_02').css('display', 'none');
-                $('.txtwrap_03').css('display', 'none');
-                break;
-            case 1:
-                $('.txtwrap_01').css('display', 'none');
-                $('.txtwrap_02').css('display', 'block');
-                $('.txtwrap_03').css('display', 'none');
-                break;
-            case 2:
-                $('.txtwrap_01').css('display', 'none');
-                $('.txtwrap_02').css('display', 'none');
-                $('.txtwrap_03').css('display', 'block');
-                break;
-        }
-    }
 });
-
-
 
 function initMap() {
     var uluru = {

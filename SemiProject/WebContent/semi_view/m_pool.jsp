@@ -24,19 +24,17 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	<section id="contents">
 		<div id="pool_01">
-			<img src="../semi_view/images/main_image/s_img1.jpg">
+			<img src="../semi_view/images/main_image/s32_img1.jpg">
 		</div>
 		<div id="pool_02">
-			<img src="../semi_view/images/main_image/s_img5.jpg" id="p_1"> <img
-				src="../semi_view/images/main_image/s_img5.jpg" id="p_2">
+			<img src="../semi_view/images/main_image/s32_img2.jpg" id="p_1">
 		</div>
 		<div id="pool_03">
-			<img src="../semi_view/images/main_image/s_img5.jpg" id="p_1"> <img
-				src="../semi_view/images/main_image/s_img5.jpg" id="p_2">
+			<img src="../semi_view/images/main_image/s32_img3.jpg" id="p_1">
 		</div>
 		<div id="pool_04">
-			<img src="../semi_view/images/main_image/s_img5.jpg" id="p_1"> <img
-				src="../semi_view/images/main_image/s_img5.jpg" id="p_2">
+			<img src="../semi_view/images/main_image/s32_img4.jpg" id="p_1"> 
+			<img src="../semi_view/images/main_image/s32_txt1.gif" id="p_2">
 		</div>
 	</section>
 	<jsp:include page="footer.jsp"></jsp:include>

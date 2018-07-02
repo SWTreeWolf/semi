@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
-import semi.DTO.ChartDTO;
 import semi.DTO.PersonDTO;
 import semi.DTO.ReservationDTO;
+import semi.DTO.ReserveViewpageDTO;
 import semi.DTO.RoomDTO;
 
 public class ReservationDAO {
@@ -46,24 +46,26 @@ public class ReservationDAO {
 			conn.close();
 	}//exit
 	
-	public ChartDTO getSales(Date date) {
-		ChartDTO dto=new ChartDTO();
+	
+	public int getResTotal(String searchName) {
+		int toto=0;
 		try {
-			System.out.println(date);
 			conn=init();
-			String sql="select sum(round(r_total/(l_dateout-l_datein))) from reservation where "
-					+ "l_datein <= TO_DATE(?,'YYYY-MM-DD') and " + 
-					"l_dateout >= TO_DATE(?,'YYYY-MM-DD') ";
-			pstmt=conn.prepareStatement(sql);
-			pstmt.setDate(1, date);
-			pstmt.setDate(2, date);
-			rs=pstmt.executeQuery();
+			String sql="select count(*) from reservation";
+			if(searchName!="") {
+				sql+=" r, person p where r.l_tipNum=p.l_tipNum and p.p_name like ?";
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, "%"+searchName+"%");
+				rs=pstmt.executeQuery();
+			}else {
+				stmt=conn.createStatement();
+				rs=stmt.executeQuery(sql);
+			}
 			while(rs.next()) {
-				dto.setC_date(date);
-				dto.setC_sales(rs.getInt(1));
-				System.out.println(rs.getInt(1)+"웅캬캬웅캬캬");
+				toto=rs.getInt(1);
 			}
 		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
 			try {
@@ -72,57 +74,22 @@ public class ReservationDAO {
 				e.printStackTrace();
 			}
 		}
-		return dto;
-		
-	}//end getSales 
-	
-	
-	
-	//예약된 리스트 가져오기 
-	public List<ReservationDTO> getResList(){
-		List<ReservationDTO> list=new LinkedList<ReservationDTO>();
-		try {
-			conn=init();
-			String sql="select * from reservation";
-			pstmt=conn.prepareStatement(sql);
-			rs=pstmt.executeQuery();
-			while(rs.next()) {
-				ReservationDTO dto=new ReservationDTO();
-				dto.setL_num(rs.getInt("l_num"));
-				dto.setL_dateIn(rs.getDate("l_datein"));
-				dto.setL_dateOut(rs.getDate("l_dateout"));
-				dto.setP_num(rs.getInt("p_num"));
-				dto.setR_num(rs.getInt("r_num"));
-				dto.setR_total(rs.getInt("r_total"));
-				dto.setL_tipNum(rs.getInt("l_tipNum"));
-				dto.setYes(rs.getInt("yes"));
-				list.add(dto);
-			}
-		} catch (ClassNotFoundException | SQLException e) {
-			e.printStackTrace();
-		}finally {
-			try {
-				exit();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		
-		return list;
+		return toto;
 	}
 	
 	
-	
+
 	//빈방 가져오기 ^^
 	public List<RoomDTO> getRoomList(String datIn,String datOut,int guests){
 		List<RoomDTO> list=new LinkedList<RoomDTO>();
 		try {
 			conn=init();
-			String sql="select * from room where r_num not in (select r_num from reservation where "+
-			"(l_datein <= TO_DATE(?,'YYYY-MM-DD') AND l_dateout >= TO_DATE(?,'YYYY-MM-DD'))"+
-			" or (l_datein < TO_DATE(?,'YYYY-MM-DD') AND l_dateout >= TO_DATE(?,'YYYY-MM-DD') )"+
-			" or (TO_DATE(?,'YYYY-MM-DD') <= l_datein AND TO_DATE(?,'YYYY-MM-DD') >= l_datein))"+
-			" and r_limitednumber>=?"; 
+			String sql="SELECT * FROM room WHERE r_num NOT IN (SELECT r_num" + 
+					" FROM  reservation WHERE "+
+		"(l_datein <= TO_DATE(?,'YYYY-MM-DD') AND l_dateout >= TO_DATE(?,'YYYY-MM-DD'))" + 
+		" OR (l_datein < TO_DATE(?,'YYYY-MM-DD') AND l_dateout >= TO_DATE(?,'YYYY-MM-DD'))" + 
+		" OR (l_datein >=TO_DATE(?,'YYYY-MM-DD') AND l_dateout <=TO_DATE(?,'YYYY-MM-DD')))" + 
+		" and r_limitednumber>=?"; 
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, datIn);
 			pstmt.setString(2, datIn);
@@ -141,14 +108,6 @@ public class ReservationDAO {
 				dto.setR_pay(rs.getInt("r_pay"));
 				list.add(dto);
 			}
-			/*private int l_num;
-			private Date l_dateIn;
-			private Date l_dateOut;
-			private String p_name;
-			private int r_num;
-			private int r_total;
-			private int l_tipNum;
-			private int yes;*/
 			
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
@@ -215,17 +174,6 @@ public class ReservationDAO {
 					e.printStackTrace();
 				}
 			}
-	/*	
-		private int l_num;
-		private Date l_dateIn;
-		private Date l_dateOut;
-		private String p_name;
-		private int r_num;
-		private int r_total;
-		private int l_tipNum;
-		private int yes;
-		insert into res values(1,TO_DATE('2018-06-27','YYYY-MM-DD'),TO_DATE('2018-06-28','YYYY-MM-DD'),'미나',1,78977,320000,0);
-		   */
 		return result;
 	}//insertR end
 	public int insertP(PersonDTO pdto) {
@@ -313,5 +261,186 @@ public class ReservationDAO {
 		}
 		return dto;
 	}//end getRes
+	
+
+	public void deleteReservationMethod(String[] reserveListChk) {
+		try {
+			conn=init( );
+			String sql="delete from Reservation where l_tipNum=?";
+			pstmt=conn.prepareStatement(sql);
+			for(int i=0; i<reserveListChk.length; i++){
+				pstmt.setInt(1, Integer.parseInt(reserveListChk[i]));
+				pstmt.addBatch();
+			}
+			pstmt.executeBatch();			
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			
+			e.printStackTrace();
+		}finally {
+			try {
+				exit();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}//end deleteMethod()	
+	
+	public void deletePersonMethod(String[] reserveListChk) {
+		try {
+			conn=init( );
+			String sql="delete from person where l_tipNum=?";
+			pstmt=conn.prepareStatement(sql);
+			for(int i=0; i<reserveListChk.length; i++){
+				pstmt.setInt(1, Integer.parseInt(reserveListChk[i]));
+				pstmt.addBatch();
+			}
+			pstmt.executeBatch();			
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			
+			e.printStackTrace();
+		}finally {
+			try {
+				exit();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}//end deleteMethod()	
+	
+	
+	
+	public void yesUpdate(int l_num) {
+    	try {
+			conn=init();
+			String sql="update reservation set yes=? where l_num=?";	
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, 1);
+		    pstmt.setInt(2, l_num);
+		    pstmt.executeUpdate();
+    	}catch(ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				exit();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+    	
+    }
+	
+	public List<ReservationDTO> getResList(){
+		List<ReservationDTO> list =new ArrayList<ReservationDTO>();
+		try {
+			conn=init();	
+			String sql = "select r.*,p.p_name from reservation r, person p where r.l_tipNum=p.l_tipNum";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				ReservationDTO dto = new ReservationDTO();
+				dto.setL_num(rs.getInt("l_num"));
+				dto.setL_dateIn(rs.getDate("l_dateIn"));
+				dto.setL_dateOut(rs.getDate("l_dateout"));
+				dto.setP_num(rs.getInt("p_num"));
+				dto.setP_name(rs.getString("p_name"));
+				dto.setL_tipNum(rs.getInt("l_tipnum"));
+				dto.setR_num(rs.getInt("r_num"));
+				dto.setR_total(rs.getInt("r_total"));
+				dto.setYes(rs.getInt("yes"));
+				list.add(dto);
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				exit();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
+	}//get ResList
+	
+	public List<ReservationDTO> getResList(ReserveViewpageDTO rvpdto){
+		List<ReservationDTO> list =new ArrayList<ReservationDTO>();
+		try {
+			conn=init();	
+			String sql = "select b.* from (select rownum ro,a.* from "+
+			"(select r.*,p.p_name from reservation r, person p where r.l_tipNum=p.l_tipNum order by r.l_num desc)a)b"+
+			" where ro>=? and ro<=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, rvpdto.getFirstW());
+			pstmt.setInt(2, rvpdto.getLastW());
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				ReservationDTO dto = new ReservationDTO();
+				dto.setL_num(rs.getInt("l_num"));
+				dto.setL_dateIn(rs.getDate("l_dateIn"));
+				dto.setL_dateOut(rs.getDate("l_dateout"));
+				dto.setP_num(rs.getInt("p_num"));
+				dto.setP_name(rs.getString("p_name"));
+				dto.setL_tipNum(rs.getInt("l_tipnum"));
+				dto.setR_num(rs.getInt("r_num"));
+				dto.setR_total(rs.getInt("r_total"));
+				dto.setYes(rs.getInt("yes"));
+				list.add(dto);
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				exit();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
+	}//get ResList
+	
+	
+	
+	public List<ReservationDTO> searchList(String p_name,ReserveViewpageDTO rvpdto){
+		List<ReservationDTO> list =new ArrayList<ReservationDTO>();
+		try {
+			conn=init();
+			String sql = "select b.* from (select rownum ro,a.* from (select r.*,p.p_name from reservation r," + 
+					" person p where r.l_tipNum=p.l_tipNum and p.p_name like ? order by r.l_num desc)a)b" + 
+					" where ro>=? and ro<=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, "%"+p_name+"%");
+			pstmt.setInt(2, rvpdto.getFirstW());
+			pstmt.setInt(3, rvpdto.getLastW());
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				ReservationDTO dto = new ReservationDTO();
+				dto.setL_num(rs.getInt("l_num"));
+				dto.setL_dateIn(rs.getDate("l_dateIn"));
+				dto.setL_dateOut(rs.getDate("l_dateout"));
+				dto.setP_num(rs.getInt("p_num"));
+				dto.setP_name(rs.getString("p_name"));
+				dto.setL_tipNum(rs.getInt("l_tipnum"));
+				dto.setR_num(rs.getInt("r_num"));
+				dto.setR_total(rs.getInt("r_total"));
+				dto.setYes(rs.getInt("yes"));
+				list.add(dto);
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				exit();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
+	}//end searchList
+	
+	
+	
+	
+	
 	
 }//end dao

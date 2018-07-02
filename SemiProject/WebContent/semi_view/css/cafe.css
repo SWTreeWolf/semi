@@ -1,8 +1,9 @@
 #contents {
-	position: relative;
-	width: 100%;
-	height: 860px;
-	text-align: center;
+    position: relative;
+    margin-top: 6%;
+    width: 100%;
+    height: 1250px;
+    text-align: center;
 }
 
 #contents #cafe_01 {
@@ -37,6 +38,7 @@
 	display: inline-block;
 	float: left;
 	width: 50%;
+	height: 304px;
 }
 
 #contents #cafe_04 {
@@ -48,5 +50,5 @@
 #cafe_04 img {
 	display: inline-block;
 	float: left;
-	width: 50%;
+	width: 100%;
 }
