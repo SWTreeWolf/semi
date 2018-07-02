@@ -1,0 +1,58 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#reserveList-top {
+	position: relative;
+	top: 23px;
+	left: 200px;
+}
+
+#reserveList-wrapper {
+	float: left;
+}
+#reserveList-wrapper h1{
+
+}
+#reserveListTable-wrapper {
+	position: relative;
+	left: 140px;
+	top: 100px;
+}
+
+#reserveListTable, #reserveListTable td, #reserveListTable th {
+	border-top: 1px solid grey;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#reserveListTable th, #reserveListTable td {
+	padding: 7px;
+	background-color: aliceblue;
+}
+
+#reserveListTable tr th:nth-of-type(1), #reserveListTable tr td:nth-of-type(1)
+	{
+	width: 40px;
+}
+
+#reserveListTable tr th:nth-of-type(4), #reserveListTable tr td:nth-of-type(4)
+	{
+	width: 250px;
+}
+
+#cancelReserveBtn {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+#reserveListpage{
+    font-size: 20px;
+        position: relative;
+    left: 320px;
+}
+.pageLink,.searchLink{
+    color: black;
+    margin-left: 10px;
+}
