@@ -1,73 +1,41 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지사항 게시판</title>
+<title>G클래스 3조</title>
 <link rel="stylesheet" href="../semi_view/css/reset.css">
 <link rel="stylesheet" href="../semi_view/css/main_common.css">
 <link rel="stylesheet" href="../semi_view/css/jquery-ui.min.css">
 <link rel="stylesheet" href="../semi_view/css/review_board.css" />
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="../semi_view/js/js_ex_board.js"></script>
 <script type="text/javascript" src="../semi_view/js/jquery.js"></script>
 <script type="text/javascript" src="../semi_view/js/jquery-ui.min.js"></script>
-<script type="text/jscript" src="../semi_view/js/header.js"></script>
-
+<script type="text/javascript" src="../semi_view/js/header.js"></script>
 <script type="text/javascript">
-	$(document)
-			.ready(
-					function() {
-						$('#searchBtn').click(
-								function() {
-									if ($('select[name=searchKey]').val() != ''
-											&& $('input[name = searchWord]')
-													.val() == '') {
-										alert('검색어를 입력하세요.');
-										return false;
-									}
-									$('form').attr('action', 'noticelist.do');
-									$('form').submit();
-								});
+	$(document).ready(function() {
+		$('#searchBtn').click(function() {
+			if ($('select[name=searchKey]').val() != '' && $('input[name = searchWord]').val() == '') {
+				alert('검색어를 입력하세요.');
+				return false;
+			}
+			$('form').attr('action', 'noticelist.do');
+			$('form').submit();
+		});
 
-						if ('$(!empty pdto.searchKey)') {
-							$
-									.each(
-											$('select[name=searchKey] option'),
-											function(index, element) {
-												if ($(element).val() == '${pdto.searchKey}') {
-													$(this).prop('selected',
-															'selected');
-												}
-											});
-							if ($('input[name=searchWord]').val(
-									'${pdto.searchWord}') == null) {
-
-							}
-						}
-					});
+		if ('$(!empty pdto.searchKey)') {
+			$.each($('select[name=searchKey] option'), function(index, element) {
+				if ($(element).val() == '${pdto.searchKey}') {
+					$(this).prop('selected', 'selected');
+				}
+		});
+		if ($('input[name=searchWord]').val('${pdto.searchWord}') == null) {}
+		}
+	});
 </script>
-<style type="text/css">
-td {
-	color: #646464;
-	font-size: 12px;
-	font-family: "돋움", dotum, sans-serif;
-}
-
-.style td {
-	padding-top: 3px;
-	padding-bottom: 3px;
-	border-bottom: 1px solid silver;
-	line-height: 1.45;
-	color: #555;
-	text-decoration: none;
-}
-</style>
 </head>
 <body>
 	<!-- 헤드 -->
@@ -99,14 +67,7 @@ td {
 														</div>
 														<div style="float: right;">
 															<span style="color: #888888; font-weight: bold;"></span>
-														</div> <!-- <form name="fboardlist">
-                                                            <input type="hidden" name="bo_table" value="review">
-                                                            <input type="hidden" name="sfl" value=""> 
-                                                            <input type="hidden" name="stx" value=""> 
-                                                            <input type="hidden" name="spt" value="">
-                                                             <input type="hidden" name="page" value="1"> 
-                                                            <input type="hidden" name="sw" value=""> -->
-
+														</div> 
 														<table cellspacing="0" cellpadding="0" class="board_list">
 															<colgroup>
 																<col width="50">
@@ -180,7 +141,7 @@ td {
 																		<c:when test="${pdto.searchKey!=null }">
 																			<input type="hidden" name="bo_table" value="review">
 																			<input type="hidden" name="sca" value="">
-																			<select name="sfl">
+																			<select name="sfl" style="vertical-align: middle">
 																				<option value="subject"
 																					<c:if test="${pdto.searchKey eq 'subject'}">selected</c:if>>제목</option>
 																				<option value="summernote"
@@ -188,24 +149,22 @@ td {
 																				<!-- <option value="wrsubject">제목+내용</option> -->
 																				<option value="writer"
 																					<c:if test="${pdto.searchKey eq 'writer'}">selected</c:if>>글쓴이</option>
-
 																			</select>
 																		</c:when>
 																		<c:otherwise>
-																			<select name="searchKey">
+																			<select name="searchKey"
+																				style="vertical-align: middle">
 																				<option value="subject">제목</option>
 																				<option value="summernote">내용</option>
 																				<option value="writer">글쓴이</option>
-
 																			</select>
-
 																		</c:otherwise>
 
 																	</c:choose>
 																	<input name="searchWord" maxlength="15" type="text"
-																		id="searchWord" /> <input type="image"
-																		src="../semi_view/images/btn_search.gif"
-																		id="searchBtn" />
+																		id="searchWord" style="vertical-align: middle" /> <input
+																		type="image" src="../semi_view/images/btn_search.gif"
+																		id="searchBtn" style="vertical-align: middle" />
 
 																</div>
 															</form>

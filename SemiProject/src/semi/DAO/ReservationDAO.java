@@ -399,8 +399,6 @@ public class ReservationDAO {
 		return list;
 	}//get ResList
 	
-	
-	
 	public List<ReservationDTO> searchList(String p_name,ReserveViewpageDTO rvpdto){
 		List<ReservationDTO> list =new ArrayList<ReservationDTO>();
 		try {
@@ -437,10 +435,4 @@ public class ReservationDAO {
 		}
 		return list;
 	}//end searchList
-	
-	
-	
-	
-	
-	
 }//end dao

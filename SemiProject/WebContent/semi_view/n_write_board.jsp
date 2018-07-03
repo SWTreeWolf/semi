@@ -8,16 +8,32 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지사항 작성</title>
+<title>G클래스 3조</title>
 <link rel="stylesheet" href="../semi_view/css/reset.css">
 <link rel="stylesheet" href="../semi_view/css/main_common.css">
 <link rel="stylesheet" href="../semi_view/css/jquery-ui.min.css">
 <script type="text/javascript" src="../semi_view/js/jquery.js"></script>
 <script type="text/javascript" src="../semi_view/js/jquery-ui.min.js"></script>
 <script type="text/jscript" src="../semi_view/js/header.js"></script>
+<style type="text/css">
+.write_head {
+	height: 30px;
+	text-align: center;
+	color: #8492A0;
+}
+
+.field {
+	border: 1px solid #ccc;
+}
+
+.realperson-regen {
+	text-align: center;
+}
+</style>
 <!--에디터-->
 <link href="../semi_view/css/bootstrap.css" rel="stylesheet">
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+<script
+	src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
 <link href="../semi_view/dist/summernote.css" rel="stylesheet">
 <script src="../semi_view/dist/summernote.js"></script>
 <script src="../semi_view/dist/lang/summernote-ko-KR.js"></script>
@@ -91,21 +107,7 @@ $(document).ready(function() {
 								<tr>
 									<td align="center"><br>
 										<div style="height: 14px; line-height: 1px; font-size: 1px;">&nbsp;</div>
-										<style type="text/css">
-.write_head {
-	height: 30px;
-	text-align: center;
-	color: #8492A0;
-}
-
-.field {
-	border: 1px solid #ccc;
-}
-
-.realperson-regen {
-	text-align: center;
-}
-</style> <script type="text/javascript">
+										<script type="text/javascript">
 				 		//글자수 제한
 						 var char_min=parseInt(0);//최소
 				 		 var char_max=parseInt(0);//최대
@@ -177,16 +179,7 @@ $(document).ready(function() {
 													</td>
 												</tr>
 											</tbody>
-										</table> <!-- <!-- 자동가입방지
-					<script src="../semi_view/js/header_jquery-ui.min.js"></script>
-					<link rel="stylesheet" type="text/css"href="../semi_view/css/jquery.realperson.css">
-					<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-					<script type="text/javascript" src="../semi_view/js/jquery.plugin.js"></script>
-					<script type="text/javascript" src="../semi_view/js/jquery.realperson.js"></script>  -->
-
-
-
-										<br> <br></td>
+										</table> <br> <br></td>
 								</tr>
 							</tbody>
 						</table>

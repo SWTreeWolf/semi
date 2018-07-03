@@ -6,14 +6,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html charset=UTF-8;">
-<title>Insert title here</title>
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+<title>G클래스 3조</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic"
+	rel="stylesheet">
 <link rel="stylesheet" href="../semi_view/css/reset.css">
 <link rel="stylesheet" href="../semi_view/css/main_common.css">
 <link rel="stylesheet" href="../semi_view/css/jquery-ui.min.css">
 <link rel="stylesheet" href="../semi_view/css/reserve.css" />
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="../semi_view/js/jquery.js"></script>
 <script type="text/javascript" src="../semi_view/js/jquery-ui.min.js"></script>
 <script type="text/jscript" src="../semi_view/js/header.js"></script>
@@ -22,20 +24,22 @@
 
 <body>
 	<jsp:include page="header.jsp" />
-	<div id="content"></div>
-	<h2>
-		<img id="cal" src="../semi_view/images/main_image/cal.png" /> 예약가능한 객실
-	</h2>
-	
-	<div class="sub-line"></div>
-	
-	<c:if test="${list==null}">
+	<div id="roomList-top">
+		<h1>
+			<img id="cal" src="../semi_view/images/main_image/cal.png" /> 예약가능한
+			객실
+		</h1>
+		<div class="sub-line"></div>
+	</div>
+	<!-- roomList-top -->
+	<c:if test="${list[0].r_num==null}">
 		<div id="no-room-list">
 			<img src="../semi_view/images/main_image/search.png" />
 			<p>선택한 날짜는 객실이 매진되었습니다!</p>
 		</div>
 	</c:if>
-	
+
+
 	<div id="room-list">
 		<c:forEach var="room" items="${list}">
 			<div class="room">
@@ -46,12 +50,12 @@
 					<dd>${room.r_contents}</dd>
 					<!-- 방설명 -->
 					<dd>
-						<a href="${room.r_num}">객실 상세정보 보러가기</a>
+						<a href="room.do?r_num=${room.r_num}">객실 상세정보 보러가기</a>
 					</dd>
 				</dl>
 
 				<div class="reserve-btn">
-					<p>${stay}박 X ${room.r_pay}원</p>
+					<p>${stay}박X${room.r_pay}원</p>
 					<a
 						href="reserveForm.pen?guests=${guests}&r_num=${room.r_num}&stay=${stay}&dateIn=${dateIn}&dateOut=${dateOut}">예약하기</a>
 				</div>

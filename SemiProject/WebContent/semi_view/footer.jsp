@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <footer id="footer">
 	<div id="logo">
-		<img src="../semi_view/images/main_image/LIN-logo.png">
+		<img src="../semi_view/images/main_image/logo.png">
 	</div>
 	<div id="f_div01">
 		<h2>INFOMATION</h2>
@@ -20,7 +20,7 @@
 				<span><a href="question.do">Voice</a></span>
 			</div>
 			<div id="txt_right">
-				<span><a href="#">Rooms</a></span> 
+				<span><a href="room.do?r_num=1">Rooms</a></span> 
 				<span><a href="service.do">Service</a></span>
 				<span><a href="map.do">Map</a></span>
 			</div>

@@ -5,7 +5,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>intro</title>
+<title>G클래스 3조</title>
 <link rel="stylesheet" href="../semi_view/css/reset.css">
 <link rel="stylesheet" href="../semi_view/css/intro_common.css">
 <link rel="stylesheet" href="../semi_view/css/swiper.min.css">

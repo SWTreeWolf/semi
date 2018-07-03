@@ -122,3 +122,9 @@ section#roomList-wrapper {
     width: 100%;
     margin-top: 5%;
 }
+
+#no-room-list img,#no-room-listA img{
+   width: 350px;
+    height: 350px;
+    margin: 100px 0px 0px 60px;
+}

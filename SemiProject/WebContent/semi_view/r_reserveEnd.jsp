@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>G클래스 3조</title>
 <link rel="stylesheet" href="../semi_view/css/reset.css">
 <link rel="stylesheet" href="../semi_view/css/main_common.css">
 <link rel="stylesheet" href="../semi_view/css/jquery-ui.min.css">
@@ -14,9 +14,6 @@
 <script type="text/javascript" src="../semi_view/js/jquery.js"></script>
 <script type="text/javascript" src="../semi_view/js/jquery-ui.min.js"></script>
 <script type="text/jscript" src="../semi_view/js/header.js"></script>
-
-<style type="text/css">
-</style>
 </head>
 <body>
 	<jsp:include page="header.jsp" />
@@ -28,7 +25,8 @@
 			src="../semi_view/images/main_image/reserved.png" />
 		<div id="reservedDiv">예약이 완료되었습니다.</div>
 		<c:if test="${param.payType=='banking'}">
-			<p style="position: relative; left: 44%; top: 10px;margin-bottom: 100px;">입금기한까지
+			<p
+				style="position: relative; top: 10px; margin-bottom: 100px; text-align: center;">입금기한까지
 				입금부탁드립니다^^</p>
 		</c:if>
 		<div id="reserveTable">
@@ -87,26 +85,26 @@
 				<tr>
 					<th>지불형태</th>
 					<td><c:if test="${param.payType=='card'}">
-카드결제
-</c:if> <c:if test="${param.payType=='banking'}">
-현금결제
-</c:if></td>
+				카드결제
+				</c:if> <c:if test="${param.payType=='banking'}">
+				현금결제
+				</c:if></td>
 				</tr>
 				<tr>
 					<th>지불정보</th>
 					<td><c:if test="${param.payType=='card'}">
-지불완료
-</c:if> <c:if test="${param.payType=='banking'}">
-미납
-</c:if></td>
+				지불완료
+				</c:if> <c:if test="${param.payType=='banking'}">
+				미납
+				</c:if></td>
 				</tr>
 				<tr>
 					<th>예약상태</th>
 					<td><c:if test="${param.payType=='card'}">
-예약확정
-</c:if> <c:if test="${param.payType=='banking'}">
-예약대기
-</c:if></td>
+				예약확정
+				</c:if> <c:if test="${param.payType=='banking'}">
+				예약대기
+				</c:if></td>
 				</tr>
 			</table>
 		</div>

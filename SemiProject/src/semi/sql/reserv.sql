@@ -33,7 +33,7 @@ CREATE TABLE Person
    PRIMARY KEY (p_num)
 );
 
-create table noticeboard(
+create table noticeboard(/*공지사항 */
    	num number constraint semiboard_num_pk primary key,
    	readcount number default 0, 
    	writer varchar2(30),
@@ -46,11 +46,42 @@ create table noticeboard(
 	upload varchar2(300)
 );
 
+create table review_board( /*이용후기 DB*/
+	num number,
+	readcount number default 0,
+	writer varchar2(40),
+	password number,
+	email varchar2(30),
+	src varchar2(100),
+	title varchar2(100),
+	upload varchar2(300),
+	content varchar2(1000),
+	link1 varchar2(100),
+	link2 varchar2(100),
+	reg_date date
+	PRIMARY KEY (num)
+);
+
+<!-- ALTER table review_board add primary key(num); -->
+
+create table review_comm( 
+	col number,
+	num number,
+	id varchar2(50),
+	reg_date date,
+	password varchar2(50),
+	content varchar2(1000),
+	constraint review_comm_fk foreign key(num) references review_board(num)
+);
+
 select * from Reservation
 select * from person
 select * from room
 
 select * from noticeboard
+
+select * from review_board
+select * from review_comm
 
 /* Drop Tables */
 DROP TABLE Reservation CASCADE CONSTRAINTS;
@@ -87,9 +118,24 @@ increment by 1
 nocache
 nocycle;
 
+create sequence review_board_seq  /*이용후기 DB 시퀀스*/
+start with 1 
+increment by 1
+nocache
+nocycle;
+
+create sequence review_board_comm_seq /*이용후기 댓글 시퀀스*/
+start with 1
+increment by 1
+nocache
+nocycle;
+
 drop sequence person_seq;
 drop sequence reserv_seq;
 drop sequence room_seq;
+drop sequence noticeboard_seq;
+drop sequence preview_board_seq;
+drop sequence preview_board_comm_seq;
 
 /* Create Foreign Keys */
 
@@ -103,6 +149,7 @@ ALTER TABLE Reservation
    REFERENCES Room (r_num)
 ;
 
+ALTER TABLE review_comm add reg_date date;
 -------------------------------------------------------------------
 /* insert colum */
 
@@ -198,12 +245,18 @@ select * from room where r_num not in
 where l_date between TO_DATE('2018-07-28','YYYY-MM-DD') and TO_DATE('2018-07-31','YYYY-MM-DD'))
 and r_limitednumber>=1
  
+SELECT * FROM room WHERE r_num NOT IN (SELECT r_num
+					 FROM  reservation WHERE 
+		(l_datein <= TO_DATE('2018-07-28','YYYY-MM-DD') AND l_dateout >= TO_DATE('2018-07-31','YYYY-MM-DD')) 
+		 OR (l_datein < TO_DATE('2018-07-28','YYYY-MM-DD') AND l_dateout >= TO_DATE('2018-07-31','YYYY-MM-DD')) 
+		 OR (l_datein >=TO_DATE('2018-07-28','YYYY-MM-DD') AND l_dateout <=TO_DATE('2018-07-31','YYYY-MM-DD'))) 
+		 and r_limitednumber>=3
 
  
 select * from reservation 
 where l_date between TO_DATE('2018-06-27','YYYY-MM-DD') and TO_DATE('2018-06-30','YYYY-MM-DD')
  
- select * from reservation where l_tipNum=90772
+select * from reservation where l_tipNum=90772
  
 select * from reservation;
 

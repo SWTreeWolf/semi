@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>G클래스 3조</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="../semi_view/css/reset.css">
 <link rel="stylesheet" href="../semi_view/css/main_common.css">
 <link rel="stylesheet" href="../semi_view/css/jquery-ui.min.css">
@@ -25,24 +28,32 @@
 		<div id="reserve-form-wrapper">
 			<div class="reserveForm" id="reserve1">
 
-				<h1 class="subject">객실정보<div class="sub-line"></div></h1>
-	
+				<h1 class="subject">
+					객실정보
+					<div class="sub-line"></div>
+				</h1>
+
 				<div id="reserve1-top">
 					<div id="img">
 						<c:if test="${param.r_num==1}">
-							<img class="img" id="room-img" src="../semi_view/images/main_image/bed1.jpg" />
+							<img class="img" id="room-img"
+								src="../semi_view/images/main_image/bed1.jpg" />
 						</c:if>
 						<c:if test="${param.r_num==2}">
-							<img class="img" id="room-img" src="../semi_view/images/main_image/bed2.jpg" />
+							<img class="img" id="room-img"
+								src="../semi_view/images/main_image/bed2.jpg" />
 						</c:if>
 						<c:if test="${param.r_num==3}">
-							<img class="img" id="room-img" src="../semi_view/images/main_image/bed3.jpg" />
+							<img class="img" id="room-img"
+								src="../semi_view/images/main_image/bed3.jpg" />
 						</c:if>
 						<c:if test="${param.r_num==4}">
-							<img class="img" id="room-img" src="../semi_view/images/main_image/bed4.jpg" />
+							<img class="img" id="room-img"
+								src="../semi_view/images/main_image/bed4.jpg" />
 						</c:if>
 						<c:if test="${param.r_num==5}">
-							<img class="img" id="room-img" src="../semi_view/images/main_image/bed5.jpg" />
+							<img class="img" id="room-img"
+								src="../semi_view/images/main_image/bed5.jpg" />
 						</c:if>
 					</div>
 
@@ -50,6 +61,7 @@
 					<div id="description">
 						<dl>
 							<c:if test="${param.r_num==1}">
+								<dt>room-1</dt>
 								<dt>높은 청결도★★★</dt>
 								<dd>최근에 머문 게스트 중 4명이 매우 청결하다고 언급한 객실 입니다.</dd>
 								<dt>완벽한 조명★★★</dt>
@@ -58,6 +70,7 @@
 								<dd>복층 구조 계단을 올라가면 최고급 호텔 침구류로 준비된 아늑한 침대가 창가에 놓여 있습니다.</dd>
 							</c:if>
 							<c:if test="${param.r_num==2}">
+								<dt>room-2</dt>
 								<dt>높은 청결도★★★</dt>
 								<dd>최근에 머문 투숙객 중 4명이 매우 청결하다고 언급한 객실 입니다.</dd>
 								<dt>넓은 방구조★★★</dt>
@@ -67,6 +80,7 @@
 
 							</c:if>
 							<c:if test="${param.r_num==3}">
+								<dt>room-3</dt>
 								<dt>뛰어난 경치★★★</dt>
 								<dd>객실내에서 아름다운 자연환경을 감상하실 수 있습니다.</dd>
 								<dt>완벽한 조명★★★</dt>
@@ -75,6 +89,7 @@
 								<dd>유아를 동반하는 투숙객들에게 적합한 객실입니다.</dd>
 							</c:if>
 							<c:if test="${param.r_num==4}">
+								<dt>room-4</dt>
 								<dt>뛰어난 경치★★★</dt>
 								<dd>객실내에서 아름다운 자연환경을 감상하실 수 있습니다.</dd>
 								<dt>완벽한 조명★★★</dt>
@@ -83,6 +98,7 @@
 								<dd>부모님과 어르신분들을 위한 안마의자가 준비되어있는 객실입니다.</dd>
 							</c:if>
 							<c:if test="${param.r_num==5}">
+								<dt>room-5</dt>
 								<dt>세련된 인테리어★★★</dt>
 								<dd>사진이 가장 아름답게 나오는 인테리어와 실내광이 뛰어난 객실입니다.</dd>
 								<dt>완벽한 조명★★★</dt>
@@ -102,26 +118,32 @@
 						<p>편의시설</p>
 						<div class="amenity-col">
 							<div>
-								<img class="limg" src="../semi_view/images/main_image/bath.png" /> 욕실
+								<img class="limg" src="../semi_view/images/main_image/bath.png" />
+								욕실
 							</div>
 							<div>
-								<img class="limg" src="../semi_view/images/main_image/tele.png" /> TV
+								<img class="limg" src="../semi_view/images/main_image/tele.png" />
+								TV
 							</div>
 							<div>
-								<img class="limg" src="../semi_view/images/main_image/hair.png" /> 헤어드라이어
+								<img class="limg" src="../semi_view/images/main_image/hair.png" />
+								헤어드라이어
 							</div>
 						</div>
 						<!-- amenity col end -->
 
 						<div class="amenity-col">
 							<div>
-								<img class="limg" src="../semi_view/images/main_image/wash.png" /> 세탁기
+								<img class="limg" src="../semi_view/images/main_image/wash.png" />
+								세탁기
 							</div>
 							<div>
-								<img class="limg" src="../semi_view/images/main_image/coffee.png" /> 커피포트
+								<img class="limg"
+									src="../semi_view/images/main_image/coffee.png" /> 커피포트
 							</div>
 							<div>
-								<img class="limg" src="../semi_view/images/main_image/cradle.png" /> 아기요람
+								<img class="limg"
+									src="../semi_view/images/main_image/cradle.png" /> 아기요람
 							</div>
 						</div>
 						<!-- amenity col end -->
@@ -130,35 +152,38 @@
 					<!--amenity end -->
 					<div id="facility">
 						<p>침대/가구</p>
-						
+
 						<div class="facil">
 							<p>
-								<img class="facilimg" src="../semi_view/images/main_image/lilbed.png" />
+								<img class="facilimg"
+									src="../semi_view/images/main_image/lilbed.png" />
 							</p>
 							1번침실</br>더블침대 1개
 						</div>
 						<c:if test="${param.r_num>=3}">
-						<div class="facil">
-							<p>
-								<img class="facilimg" src="../semi_view/images/main_image/lilbed.png" />
-							</p>
-							2번침실</br>더블침대 1개
-						</div>
+							<div class="facil">
+								<p>
+									<img class="facilimg"
+										src="../semi_view/images/main_image/lilbed.png" />
+								</p>
+								2번침실</br>더블침대 1개
+							</div>
 						</c:if>
 						<div class="facil">
 							<p>
-								<img class="facilimg" src="../semi_view/images/main_image/armchair.png" />
+								<img class="facilimg"
+									src="../semi_view/images/main_image/armchair.png" />
 							</p>
 							거실</br>소파 1개
 						</div>
-						
+
 					</div>
 					<!--facility end -->
 				</div>
 				<!--reserve1-bottom end-->
 				<p class="v" id="reserve1V">
-					<a href="#"> <img src="../semi_view/images/main_image/btn_intro_arrow.png"
-						alt="" />
+					<a href="#"> <img
+						src="../semi_view/images/main_image/btn_intro_arrow.png" alt="" />
 					</a>
 				</p>
 
@@ -169,8 +194,11 @@
 			<!--------------------------------reserve1 end---------------------------------------->
 
 			<div class="reserveForm" id="reserve2">
-				<h1 class="subject">유의사항<div class="sub-line"></div></h1>
-				
+				<h1 class="subject">
+					유의사항
+					<div class="sub-line"></div>
+				</h1>
+
 
 				<div id="warning">
 					<h3>자동 예약취소 안내</h3>
@@ -194,8 +222,8 @@
 				</div>
 				<!-- warning end -->
 				<p class="v" id="reserve2V">
-					<a href="#"> <img src="../semi_view/images/main_image/btn_intro_arrow.png"
-						alt="" />
+					<a href="#"> <img
+						src="../semi_view/images/main_image/btn_intro_arrow.png" alt="" />
 					</a>
 				</p>
 
@@ -205,8 +233,11 @@
 
 
 			<div class="reserveForm" id="reserve3">
-				<h1 class="subject">예약하기<div class="sub-line"></div></h1>
-			
+				<h1 class="subject">
+					예약하기
+					<div class="sub-line"></div>
+				</h1>
+
 				<form action="reserveRequest.do" method="post">
 					<div id="writing">
 						<div id="reserveInfo">
@@ -274,7 +305,8 @@
 							</div>
 							<div id="cardPay">
 								<div>
-									<img id="cardImg" src="../semi_view/images/main_image/cardImg1.png" />
+									<img id="cardImg"
+										src="../semi_view/images/main_image/cardImg1.png" />
 								</div>
 								<p>
 									<input type="text" class="write" placeholder="카드회사이름"
@@ -319,8 +351,6 @@
 
 			</div>
 			<!---------------------------------------- reserve3 end---------------------------------------- -->
-
-
 		</div>
 		<!-- reserve wrapper end -->
 	</div>

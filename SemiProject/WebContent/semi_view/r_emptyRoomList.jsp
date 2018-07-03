@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html charset=UTF-8;">
-<title>Insert title here</title>
+<title>G클래스 3조</title>
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic"
 	rel="stylesheet">
 <link rel="stylesheet" href="../semi_view/css/reset.css">
@@ -32,7 +32,7 @@
 		</h1>
 		<div class="sub-line"></div>
 	</div>
-	<!-- roomList-top --> <c:if test="${list==null}">
+	<!-- roomList-top --> <c:if test="${list eq null}">
 		<div id="no-room-list">
 			<img src="../semi_view/images/main_image/search.png" />
 			<p>선택한 날짜는 객실이 매진되었습니다!</p>
@@ -49,7 +49,7 @@
 					<dd>${room.r_contents}</dd>
 					<!-- 방설명 -->
 					<dd>
-						<a href="${room.r_num}">객실 상세정보 보러가기</a>
+						<a href="room.do?r_num=${room.r_num}">객실 상세정보 보러가기</a>
 					</dd>
 				</dl>
 

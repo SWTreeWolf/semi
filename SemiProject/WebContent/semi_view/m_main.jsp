@@ -4,7 +4,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Main</title>
+<title>G클래스 3조</title>
 <link rel="stylesheet" href="../semi_view/css/reset.css">
 <link rel="stylesheet" href="../semi_view/css/main_common.css">
 <link rel="stylesheet" href="../semi_view/css/main_content.css">
@@ -71,12 +71,12 @@
 	<section id="content_01">
 		<div class="div_wrap">
 			<div>
-				<a href="#"> <img
+				<a href="room.do?r_num=1"> <img
 					src="../semi_view/images/main_image/room_preview.png">
 				</a> <span>Room PreView</span>
 				<p id="txt_wrap">모던한 인테리어와 고급스러운 가구와 소품, 호텔수준의 패브릭 제품, 리드미컬한
 					라인조명의 조화가 보이실겁니다.</p>
-				<a href="#" id="learnMore">자세히보기</a>
+				<a href="room.do?r_num=1" id="learnMore">자세히보기</a>
 			</div>
 			<div>
 				<a href="pool.do"> <img
@@ -99,7 +99,7 @@
 				</a> <span>Reservation</span>
 				<p id="txt_wrap">예약은 회원이 아니라도 가능합니다. 실시간 예약시스템을 통해 예약해주세요. 침대는
 					깨끗하고 바닷바람은 시원하고 파도소리는 두근거리실 겁니다.</p>
-				<a href="#" id="learnMore">자세히보기</a>
+				<a href="myReserve.do" id="learnMore">자세히보기</a>
 			</div>
 		</div>
 		<div id="m_img">

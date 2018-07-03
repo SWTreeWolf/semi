@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>G클래스 3조</title>
 <link rel='stylesheet' href='../semi_view/css/fullcalendar.css'>
 <link rel="stylesheet" href='../semi_view/css/mg_calendarView.css'>
 <link rel="stylesheet" href='../semi_view/css/mg_mainSide.css'>

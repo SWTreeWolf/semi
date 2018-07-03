@@ -1,6 +1,7 @@
 package semi.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -69,15 +70,15 @@ public class Main_controller extends HttpServlet {
 		} else if (action.equals("/myReserveRequest.do")) { // 나의 예약 찾기 검색
 			MyReserveAction my = new MyReserveAction();
 			my.execute(req, resp);
-		} else if (action.equals("/mg_reserveList.do")) {// 관리자페이지-메인(예약리스트)
+		}
+		// 관리자페이지 시작
+		else if (action.equals("/mg_reserveList.do")) {// 관리자페이지-메인(예약리스트)
 			path = "../semi_view/mg_reserveList.jsp";
 		} else if (action.equals("/mg_reserveCancel.do")) {// 관리자페이지-예약리스트-예약취소
 			CancelAction can = new CancelAction();
 			can.execute(req, resp);
 			path = "../semi_view/mg_reserveList.jsp";
-		} 
-		// 관리자페이지 시작
-		else if (action.equals("/mg_reserveView.do")) { // 관리자페이지-예약리스트-리스트출력 ajax
+		} else if (action.equals("/mg_reserveView.do")) { // 관리자페이지-예약리스트-리스트출력 ajax
 			ManagerReserveViewAction mrva = new ManagerReserveViewAction();
 			mrva.execute(req, resp);
 		} else if (action.equals("/mg_payCheck.do")) {// 관리자페이지-예약리스트-입금확인 ajax
@@ -96,7 +97,7 @@ public class Main_controller extends HttpServlet {
 			CalendarAction cal = new CalendarAction();
 			cal.execute(req, resp);
 		}
-		// notice_borad
+		// 공지사항
 		else if (action.equals("/noticelist.do")) {
 			Notice_ListAction list = new Notice_ListAction();
 			list.execute(req, resp);
@@ -123,6 +124,45 @@ public class Main_controller extends HttpServlet {
 			Notice_UpdateProAction pro = new Notice_UpdateProAction();
 			MultipartRequest multi = pro.execute(req, resp);
 			resp.sendRedirect("noticelist.do?pageNum=" + multi.getParameter("pageNum"));
+		}
+		// 이용후기 
+		else if(action.equals("/review_board.do")) {
+			review_listAction list = new review_listAction();
+			list.execute(req, resp);
+			path="../semi_view/review_board.jsp";
+		}else if(action.equals("/view_board.do")) {
+			review_viewAction view = new review_viewAction();
+			view.execute(req, resp);
+			path="../semi_view/review_view_board.jsp";
+		}else if(action.equals("/writeboard.do")) {
+			path="../semi_view/review_write_board.jsp";
+		}else if(action.equals("/view_board.do")) {
+			path="../semi_view/review_view_board.jsp";
+		}else if(action.equals("/write.do")) {
+			review_writeAction write = new review_writeAction();
+			MultipartRequest multi = write.execute(req, resp);
+			resp.sendRedirect("review_board.do");
+		}else if(action.equals("/update_board.do")){
+			review_updateAction update = new review_updateAction();
+			update.execute(req, resp);
+			path="../semi_view/review_update_board.jsp";
+		}else if(action.equals("/updatePro.do")) {
+			review_updateProAction pro = new review_updateProAction();
+			MultipartRequest multi = pro.execute(req, resp);
+			resp.sendRedirect("view_board.do");
+		}else if(action.equals("/delete_board.do")) {
+			review_deleteAction write = new review_deleteAction();
+			write.execute(req, resp);
+			resp.sendRedirect("review_board.do");
+		}else if(action.equals("/commentDelete")) {
+			ReviewcommDeleteAction commdelete = new ReviewcommDeleteAction();
+			commdelete.execute(req, resp);
+		}else if(action.equals("/commentInput")) {
+			ReviewCommInput commInput = new ReviewCommInput();
+			commInput.execute(req, resp);
+		}else if(action.equals("/commentList")) {
+			ReviewcommListAction commlist = new ReviewcommListAction();
+			commlist.execute(req, resp);
 		}
 		
 		if (path != "") {

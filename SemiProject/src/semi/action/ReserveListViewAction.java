@@ -12,7 +12,6 @@ import semi.DTO.ReservationDTO;
 
 public class ReserveListViewAction {
 
-	@SuppressWarnings("unchecked")
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int l_tipNum = Integer.parseInt(req.getParameter("l_tipNum"));
 		ReservationDAO dao = ReservationDAO.getInstance();

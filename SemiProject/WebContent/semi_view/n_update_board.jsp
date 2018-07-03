@@ -9,12 +9,9 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항수정</title>
-<link rel="stylesheet" href="../semi_view/css/reset.css">
-<link rel="stylesheet" href="../semi_view/css/main_common.css">
-<link rel="stylesheet" href="../semi_view/css/jquery-ui.min.css">
-<script type="text/javascript" src="../semi_view/js/jquery.js"></script>
-<script type="text/javascript" src="../semi_view/js/jquery-ui.min.js"></script>
-<script type="text/jscript" src="../semi_view/js/header.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
 <script type="text/javascript">
   	$(document).ready(function(){
   		$('form').on('submit',function(){
@@ -29,7 +26,7 @@
 <!-- 해드 -->
 <jsp:include page="header.jsp"></jsp:include>
 <!-- 바디 시작-->
-<form name="fwrite" action="noticeupdatePro.do" method="post" enctype="multipart/form-data">				
+<form name="fwrite" action="updatePro.do" method="post" enctype="multipart/form-data">				
 			<input type="hidden" value="${param.num}" name="num" />
 			<input type="hidden" value="${param.pageNum}" name="pageNum" />
 
@@ -98,12 +95,12 @@
 												<tr>
 													<td class="writer">작성자</td>
 													<td><input class="ed" maxlength="20" size="15"
-														name="writer" itemname="이름" value=""
+														name="writer" itemname="이름" value="${dto.writer }"
 														style="background-position: right top; background-repeat: no-repeat;" /></td>
 												</tr><tr><td colspan="2" heigth="1" bgcolor="#e7e7e7"></td></tr>
 												<tr>
 													<td class="subject">제 목</td>
-													<td><input class="ed" size="50" name="subject" itemname="제목" required="" value=""></td>
+													<td><input class="ed" size="50" name="subject" itemname="제목" required="" value="${dto.subject }"></td>
 												</tr>
 												<tr><td colspan="2" height="1" bgcolor="#e7e7e7"></td></tr>
 												<!-- 에디터 -->
@@ -187,6 +184,5 @@
 </tbody>
 </table>
 </form>
-<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
