@@ -45,7 +45,9 @@ public class Main_controller extends HttpServlet {
 			path = "/semi_view/m_question.jsp";
 		} else if (action.equals("/map.do")) {
 			path = "/semi_view/m_location.jsp";
-		} 
+		} else if (action.equals("/room.do")) {
+			path = "/semi_view/m_roomPreview.jsp";
+		}
 		// reservation 시작
 		else if (action.equals("/emptyRoomList.do")) {// 빈방(첨에)
 			ListAction list = new ListAction();

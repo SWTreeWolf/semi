@@ -15,7 +15,7 @@
 <script type="text/javascript" src="../semi_view/js/jquery.js"></script>
 <script type="text/javascript" src="../semi_view/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../semi_view/js/header.js"></script>
-<script src="../semi_view/js/swiper.min.js"></script>
+<script type="text/javascript" src="../semi_view/js/swiper.min.js"></script>
 <script>
 	$(document).ready(function() {
 		var swiper = new Swiper('.swiper-container', {

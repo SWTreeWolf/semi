@@ -11,11 +11,11 @@
 			<li><a href="intro.do">SIDE ROOM</a>
 				<ul>
 					<li><a href="intro.do">preview</a></li>
-					<li><a href="room_templet.html">ROOM -1</a></li>
-					<li><a href="room_templet.html">ROOM -2</a></li>
-					<li><a href="room_templet.html">ROOM -3</a></li>
-					<li><a href="room_templet.html">ROOM -4</a></li>
-					<li><a href="room_templet.html">ROOM -5</a></li>
+					<li><a href="room.do?r_num=1">ROOM -1</a></li>
+					<li><a href="room.do?r_num=2">ROOM -2</a></li>
+					<li><a href="room.do?r_num=3">ROOM -3</a></li>
+					<li><a href="room.do?r_num=4">ROOM -4</a></li>
+					<li><a href="room.do?r_num=5">ROOM -5</a></li>
 				</ul></li>
 
 			<li><a href="pool.do">SPECIALITY</a>
