@@ -5,27 +5,26 @@
 
 body {
 	width: 1840px;
-	height: 2600px;
 }
 
 .v {
 	position: relative;
 	text-align: center;
-	    top: 50px;
+	top: 50px;
 }
 #reserve2V {
 	margin-top: 60px;
 }
 
 #reserve-form-wrapper-wrapper {
-      height: 2800px;
+    height: 2500px;
 }
 
 #reserve-form-wrapper {
 	position: relative;
 	margin-top: 2%;
 	width: 100%;
-	height: 1800px; /*height : 800px*/
+	height : 800px
 	text-align: center;
 }
 
@@ -48,14 +47,6 @@ body {
 
 #reserve1{
 	margin-top:130px;
-}
-#reserve2{
-	
-}
-#reserve3 {
-	margin-left: 10px;
-	height: 740px;
-	text-align: center;
 }
 
 #reserve1-top {
@@ -85,16 +76,23 @@ div#img {
 		rgba(0, 0, 0, 0.19);
 }
 
+#description h2{
+	font-size: 25px;
+    text-align: left;
+    margin: -10px 0 20px 0px;
+    color: lightcoral;
+}
+
 #description dl {
 	margin-top: 40px;
 	margin-left: 30px;
 }
 
 #description dt {
-	text-align: left;
-	font-size: 20px;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
-
 #description dd {
 	text-align: left;
 	font-size: 15px;
@@ -111,9 +109,10 @@ div#img {
 
 #amenity {
     display: inline-block;
-    width: 33%;
-    margin-left: 70px;
+    width: 28%;
+       margin-left: 110px;
     height: 300px;
+    text-align: left;
 }
 
 .amenity-col {
@@ -137,9 +136,10 @@ div#img {
 }
 
 #facility {
-	display: inline-block;
-	width: 40%;
-	height: 300px;
+    display: inline-block;
+    width: 40%;
+    height: 300px;
+    text-align: left;
 }
 
 #facility .facil {

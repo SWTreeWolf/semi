@@ -8,17 +8,18 @@ section#myReserve-wrapper {
 	height: 1300px;
 	text-align: center;
 	background-image: url(../images/main_image/bg_01.jpg);
+	margin-top: -51px;
+	    margin-bottom: -10px;
 }
 
 div#border-wrapper {
-	display: inline-block;
-	margin: 3% 0;
-	width: 800px;
-	height: auto;
-	padding-bottom: 70px;
-	background-color: #f6f6f6;
-	box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0
-		rgba(0, 0, 0, 0.19);
+    display: inline-block;
+    margin: 9% 0;
+    width: 800px;
+    height: auto;
+     padding: 0 30px 40px 30px;
+    background-color: #f6f6f6;
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .subject-wrapper {

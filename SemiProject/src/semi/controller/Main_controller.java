@@ -164,6 +164,59 @@ public class Main_controller extends HttpServlet {
 			ReviewcommListAction commlist = new ReviewcommListAction();
 			commlist.execute(req, resp);
 		}
+		//이용문의
+		else if(action.equals("/iq_list.do")) { //이용문의 리스트 
+			Inquiry_ListAction list = new Inquiry_ListAction(); 
+			list.execute(req,resp); 
+			path="/semi_view/i_reviewboard.jsp";
+		}else if(action.equals("/iq_writeboard.do")) { //이용문의 - 글쓰기 폼
+			path="/semi_view/i_writeboard.jsp";
+		}else if(action.equals("/iq_write.do")) { //이용문의 - 글쓰기 
+			Inquiry_WriteAction write = new Inquiry_WriteAction();
+			MultipartRequest multi = write.execute(req, resp);
+			resp.sendRedirect("iq_list.do?pageNum=" + multi.getParameter("pageNum"));
+		}else if(action.equals("/iq_view.do")) { //이용문의 - 작성 글 보기 
+			Inquiry_ViewAction view = new Inquiry_ViewAction(); 
+			view.execute(req, resp);
+			path="/semi_view/i_viewboard.jsp";
+		}else if(action.equals("/iq_deleteForm.do")) { //이용문의 - 삭제(비밀번호 확인)
+			Inquiry_SearchPasswordAction search = new Inquiry_SearchPasswordAction(); 
+			search.execute(req,resp);
+			path="/semi_view/i_delete.jsp";
+		}else if(action.equals("/iq_delete.do")) { //이용문의 - 삭제
+			Inquiry_DeleteAction dform = new Inquiry_DeleteAction(); 
+			dform.exeute(req,resp); 
+			resp.sendRedirect("iq_list.do");
+		}else if (action.equals("/updateForm.do")) {//이용문의 - 수정폼
+			Inquiry_SearchPasswordAction search = new Inquiry_SearchPasswordAction(); 
+			search.execute(req,resp);
+			Inquiry_UpdateFormAction uform = new Inquiry_UpdateFormAction(); 
+			uform.execute(req, resp);
+			path = "/semi_view/i_updateboard.jsp";
+		}else if (action.equals("/checkForm.do")) { //이용문의 - 수정(비밀번호 확인)
+			Inquiry_SearchPasswordAction search = new Inquiry_SearchPasswordAction();
+			search.execute(req, resp);
+			path = "/semi_view/i_check.jsp";
+		}else if (action.equals("/iq_updatePro.do")) {//이용문의 - 수정
+			Inquiry_UpdateProAction pro = new Inquiry_UpdateProAction();
+			MultipartRequest multi = pro.execute(req, resp);
+			resp.sendRedirect("iq_list.do");
+		}else if (action.equals("/upload.do")) { //이용문의 - 파일 업로드 
+			Inquiry_FileAction file = new Inquiry_FileAction(); 
+			file.execute(req, resp);
+		}else if (action.equals("/commentAdd.do")) { //이용문의 - 댓글 작성 
+			Inquiry_ReplyAddAction reply = new Inquiry_ReplyAddAction(); 
+			reply.execute(req, resp);
+		}else if(action.equals("/commentList.do")) { //이용문의 - 댓글 목록
+			Inquiry_ReplyListAction c_list = new Inquiry_ReplyListAction(); 
+			c_list.execute(req, resp);
+		} else if(action.equals("/commentDelete.do")) { //이용문의 - 댓글 삭제 
+			Inquiry_ReplyDelAction c_del = new Inquiry_ReplyDelAction(); 
+			c_del.execute(req,resp); 
+		} else if(action.equals("/commentUpdate.do")) { //이용문의 - 댓글 수정 
+			Inquiry_ReplyUpdateAction c_up = new Inquiry_ReplyUpdateAction(); 
+			c_up.execute(req,resp); 
+		}
 		
 		if (path != "") {
 			RequestDispatcher dis = req.getRequestDispatcher(path);

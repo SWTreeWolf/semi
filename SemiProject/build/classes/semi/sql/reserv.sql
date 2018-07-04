@@ -62,8 +62,6 @@ create table review_board( /*이용후기 DB*/
 	PRIMARY KEY (num)
 );
 
-<!-- ALTER table review_board add primary key(num); -->
-
 create table review_comm( 
 	col number,
 	num number,
@@ -74,6 +72,36 @@ create table review_comm(
 	constraint review_comm_fk foreign key(num) references review_board(num)
 );
 
+create table qna(
+ num number constraint qna_num_pk primary key,
+ viewcount number default 0,
+ writer varchar2(30) NOT NULL,
+ password varchar2(30) NOT NULL,
+ email varchar2(50), 
+ hpage varchar2(50), 
+ title varchar2(50),
+ content varchar2(1000) NOT NULL,
+ qdate date NOT NULL, 
+ lk1 varchar2(50), 
+ lk2 varchar2(50), 
+ ref number, 
+ re_step number, 
+ re_level number, 
+ upload varchar2(300)
+);
+
+create table cm(
+c_num number not null, 
+b_num number not null, 
+writer varchar2(20), 
+password varchar2(20) NOT NULL, 
+rdate date NOT NULL,
+content varchar2(500), 
+constraint pk_comment primary key(c_num),
+constraint fk_comment foreign key(b_num) references qna(num) 
+);
+
+
 select * from Reservation
 select * from person
 select * from room
@@ -83,12 +111,21 @@ select * from noticeboard
 select * from review_board
 select * from review_comm
 
+select * from qna
+select * from cm
+
 /* Drop Tables */
 DROP TABLE Reservation CASCADE CONSTRAINTS;
 DROP TABLE Person CASCADE CONSTRAINTS;
 DROP TABLE Room CASCADE CONSTRAINTS;
 
 DROP TABLE noticeboard CASCADE CONSTRAINTS;
+
+DROP TABLE review_board CASCADE CONSTRAINTS;
+DROP TABLE review_comm CASCADE CONSTRAINTS;
+ 
+DROP TABLE qna CASCADE CONSTRAINTS;
+DROP TABLE cm CASCADE CONSTRAINTS;
 
 /* Delete colums*/
 delete from reservation;
@@ -130,6 +167,18 @@ increment by 1
 nocache
 nocycle;
 
+create sequence cm_seq 
+start with 1
+increment by 1
+nocache
+nocycle;
+
+create sequence qna_seq 
+start with 1
+increment by 1
+nocache
+nocycle;
+
 drop sequence person_seq;
 drop sequence reserv_seq;
 drop sequence room_seq;
@@ -162,11 +211,11 @@ insert into Reservation values(reserv_seq.nextval,TO_DATE('2018-06-05','YYYY-MM-
 select r.*,p.p_name from reservation r, person p where r.l_tipNum=p.l_tipNum
 
 /* room */
-insert into room values(room_seq.nextval,'조명이 있는방',90000,4,'정말정말 좋은방이에요^^ 너무너무너무 ㅠㅠㅠㅠㅠㅠㅠ흐흐그흐ㅡㄱ흐그흑');
-insert into room values(room_seq.nextval,'경치가 아름다운 방',120000,5,'비싸지만 좋은방입니다^^^^^6ㅇㅇㅅㅇㅅㅇㅅㅇㅅ케케케케케');
-insert into room values(room_seq.nextval,'가족이 즐겨찾는 방',20000,2,'두명밖에 못 들어가는 방이에에요.... ');
-insert into room values(room_seq.nextval,'아름다운 디자인의 방',200000,5,'정말 좋은방입니다 추천해요 뭐가좋냐면... ㅎㅎㅎㅎ');
-insert into room values(room_seq.nextval,'바다가 보이는 방',200000,5,'정말 좋은방입니다 추천해요 뭐가좋냐면... ㅎㅎㅎㅎ');
+insert into room values(1,'시원한 바다의 Room',390000,4,'깔끔한 이미지로써 청량감이 돋보이는 객실입니다.');
+insert into room values(2,'가족이 즐겨찾는 Room',250000,5,'상당히 넓어서 가족들끼리 오기에는 적합한 객실입니다.');
+insert into room values(3,'그리워지는 Room',220000,2,'조용하고 고즈넉한 분위기가 있어서 마음이 편안해지는 객실입니다');
+insert into room values(4,'이국적인 Room',200000,5,'밝으면서도 경쾌한 분위기의 방입니다 온 가족이 모이기엔 적합한 객실입니다');
+insert into room values(5,'매력적인 Room',1400000,5,'아기자기한 분위기의 방같지만 유명인사들이 가장 많이 찾는 객실입니다.');
 
 /* person */
 insert into person values('미나',person_seq.nextval,'444','ㅇㅇ','ㅇ',78977,'ㅇㅇ','ㅇㅇ');

@@ -17,7 +17,6 @@ $(document).ready(function(){
 
 function listMessage(res){
 	if(res[0] == null){
-		alert('chk');
 		$('#room-list').css('display','none');
 		$('#no-room-list').css('display','inline-block');
 	}else{

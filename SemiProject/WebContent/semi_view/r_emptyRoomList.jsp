@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html charset=UTF-8;">
-<title>G클래스 3조</title>
+<title>Insert title here</title>
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic"
 	rel="stylesheet">
 <link rel="stylesheet" href="../semi_view/css/reset.css">
@@ -32,12 +32,17 @@
 		</h1>
 		<div class="sub-line"></div>
 	</div>
-	<!-- roomList-top --> <c:if test="${list eq null}">
+	<!-- roomList-top --> <c:if test="${list[0].r_num==null}">
 		<div id="no-room-list">
 			<img src="../semi_view/images/main_image/search.png" />
 			<p>선택한 날짜는 객실이 매진되었습니다!</p>
 		</div>
 	</c:if>
+
+			<div id="no-room-listA" style="display:none">
+			<img src="../semi_view/images/main_image/search.png" />
+			<p>선택한 날짜는 객실이 매진되었습니다!</p>
+		</div>
 
 	<div id="room-list">
 		<c:forEach var="room" items="${list}">

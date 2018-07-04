@@ -32,7 +32,7 @@
 			<li><a href="question.do">VOICE</a>
 				<ul>
 					<li><a href="noticelist.do">공지사항</a></li>
-					<li><a href="#">이용문의</a></li>
+					<li><a href="iq_list.do">이용문의</a></li>
 					<li><a href="review_board.do">이용후기</a></li>
 					<li><a href="question.do">FAQ</a></li>
 					<li><a href="myReserve.do">나의 예약 찾기</a></li>

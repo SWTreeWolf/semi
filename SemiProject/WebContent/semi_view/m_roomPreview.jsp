@@ -40,6 +40,120 @@
 <body>
 	<jsp:include page="header.jsp" />
 	<div id="reserve-form-wrapper-wrapper">
+		
+		<c:if test="${param.r_num==1}">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r1-1.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r1-2.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r1-3.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r1-4.jpg">
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div><!-- end swiper-container -->
+		</c:if><!-- end r_num 1 -->
+				<c:if test="${param.r_num==2}">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r2-1.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r2-2.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r2-3.jpg">
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div><!-- end swiper-container -->
+		</c:if><!-- end r_num 2 -->
+				<c:if test="${param.r_num==3}">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r3-1.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r3-2.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r3-3.jpg">
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div><!-- end swiper-container -->
+		</c:if><!-- end r_num 3 -->
+				<c:if test="${param.r_num==4}">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r4-1.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r4-2.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r4-3.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r4-4.jpg">
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div><!-- end swiper-container -->
+		</c:if><!-- end r_num 4 -->
+				<c:if test="${param.r_num==5}">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r5-1.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r5-2.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r5-3.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="../semi_view/images/room_image/r5-4.jpg">
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div><!-- end swiper-container -->
+		</c:if><!-- end r_num 5 -->
+		
+		
+		
+		
 		<div id="reserve-form-wrapper">
 			<div class="reserveForm" id="reserve1">
 
@@ -73,6 +187,7 @@
 					<div id="description">
 						<dl>
 							<c:if test="${param.r_num==1}">
+								<h2>시원한 바다의 Room</h2>
 								<dt>높은 청결도★★★</dt>
 								<dd>최근에 머문 게스트 중 4명이 매우 청결하다고 언급한 객실 입니다.</dd>
 								<dt>완벽한 조명★★★</dt>
@@ -81,6 +196,7 @@
 								<dd>복층 구조 계단을 올라가면 최고급 호텔 침구류로 준비된 아늑한 침대가 창가에 놓여 있습니다.</dd>
 							</c:if>
 							<c:if test="${param.r_num==2}">
+								<h2>가족이 즐겨찾는 Room</h2>
 								<dt>높은 청결도★★★</dt>
 								<dd>최근에 머문 투숙객 중 4명이 매우 청결하다고 언급한 객실 입니다.</dd>
 								<dt>넓은 방구조★★★</dt>
@@ -90,6 +206,7 @@
 
 							</c:if>
 							<c:if test="${param.r_num==3}">
+							<h2>그리워지는 Room</h2>
 								<dt>뛰어난 경치★★★</dt>
 								<dd>객실내에서 아름다운 자연환경을 감상하실 수 있습니다.</dd>
 								<dt>완벽한 조명★★★</dt>
@@ -98,6 +215,7 @@
 								<dd>유아를 동반하는 투숙객들에게 적합한 객실입니다.</dd>
 							</c:if>
 							<c:if test="${param.r_num==4}">
+							<h2>이국적인 Room</h2>
 								<dt>뛰어난 경치★★★</dt>
 								<dd>객실내에서 아름다운 자연환경을 감상하실 수 있습니다.</dd>
 								<dt>완벽한 조명★★★</dt>
@@ -106,6 +224,7 @@
 								<dd>부모님과 어르신분들을 위한 안마의자가 준비되어있는 객실입니다.</dd>
 							</c:if>
 							<c:if test="${param.r_num==5}">
+							<h2>매력적인 Room</h2>
 								<dt>세련된 인테리어★★★</dt>
 								<dd>사진이 가장 아름답게 나오는 인테리어와 실내광이 뛰어난 객실입니다.</dd>
 								<dt>완벽한 조명★★★</dt>
@@ -122,7 +241,7 @@
 
 				<div id="reserve1-bottom">
 					<div id="amenity">
-						<p>편의시설</p>
+						<p style="margin-left: 70px;">편의시설</p>
 						<div class="amenity-col">
 							<div>
 								<img class="limg" src="../semi_view/images/main_image/bath.png" />
@@ -188,27 +307,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<img src="../semi_view/images/index_image/bg_01.jpg">
-				</div>
-				<div class="swiper-slide">
-					<img src="../semi_view/images/index_image/bg_01.jpg">
-				</div>
-				<div class="swiper-slide">
-					<img src="../semi_view/images/index_image/bg_01.jpg">
-				</div>
-				<div class="swiper-slide">
-					<img src="../semi_view/images/index_image/bg_01.jpg">
-				</div>
-			</div>
-			<!-- Add Pagination -->
-			<div class="swiper-pagination"></div>
-			<!-- Add Arrows -->
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
-		</div>
+		
+		
+		
+		
+		
+		
 	</div>
 
 	<jsp:include page="footer.jsp"></jsp:include>
