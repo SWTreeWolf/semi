@@ -1,29 +1,23 @@
-$(document).ready(
-		function() {
-
-			$('#myReserve-search-btn').on(
-					'click',
-					function() {
-						if ($('#myReserve-search-l_tipNum').val() == ''
-								|| $('#myReserve-search-p_name').val() == '') {
-							alert("예약번호와 이름을 입력해주세요");
-							return false;
-						}
-						$.ajax({
-							type : 'GET',
-							dataType : 'json',
-							url : 'myReserveRequest.do?l_tipNum='
-									+ $('#myReserve-search-l_tipNum').val()
-									+ '&p_name='
-									+ $('#myReserve-search-p_name').val(),
-							success : listMessage,
-							error : function(res) {
-								console.log(res);
-							}
-
-						});// end ajax
-					});
-		});// end jquery
+$(document).ready(function() {
+	$('#myReserve-search-btn').on('click',function() {
+		if ($('#myReserve-search-l_tipNum').val() == '' || $('#myReserve-search-p_name').val() == '') {
+			alert("예약번호와 이름을 입력해주세요");
+			return false;
+		}
+	$.ajax({
+		type : 'GET',
+		dataType : 'json',
+		url : 'myReserveRequest.do?l_tipNum='
+				+ $('#myReserve-search-l_tipNum').val()
+				+ '&p_name='
+				+ $('#myReserve-search-p_name').val(),
+		success : listMessage,
+		error : function(res) {
+			console.log(res);
+		}
+	});// end ajax
+	});
+});// end jquery
 
 function listMessage(res) {
 	if (res == 1) {

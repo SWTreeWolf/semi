@@ -129,6 +129,9 @@ DROP TABLE cm CASCADE CONSTRAINTS;
 
 /* Delete colums*/
 delete from reservation;
+delete from review_board;
+delete from review_comm;
+
 
 /* Create Sequence */
 create sequence person_seq
@@ -317,4 +320,5 @@ select * from reservation r, person p where r.l_tipnum=p.l_tipnum and p.p_name='
 drop table room
 select * from room
 
+update qna set title='000', password='123', content='123456789', upload=null email=null, hpage=?, lk1=?, lk2=? where num=?
 

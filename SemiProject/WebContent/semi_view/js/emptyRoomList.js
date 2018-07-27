@@ -18,9 +18,11 @@ $(document).ready(function(){
 function listMessage(res){
 	if(res[0] == null){
 		$('#room-list').css('display','none');
-		$('#no-room-list').css('display','inline-block');
+		$('#no-room-listA').css('display','inline-block');
+		$('#no-room-list').css('display','none');
 	}else{
 		$('#room-list').css('display','inline-block');
+		$('#no-room-listA').css('display','none');
 		$('#no-room-list').css('display','none');
 	}
 	for(var i in res){

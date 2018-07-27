@@ -1,7 +1,6 @@
-var b_num;
 $(document).ready(function(){
 	$(".update").on("click",function(){
-		$('.frm').attr('action','checkForm.do'); 
+		$('.frm').attr('action','iq_checkForm.do'); 
 		$('.frm').submit(); 
 	}); 
 	
@@ -10,11 +9,11 @@ $(document).ready(function(){
 		$('.frm').submit(); 
 	}); 
 
-	var b_num=$('input[name="num"]').val();
+   var b_num=$('input[name="num"]').val();
    listView(b_num); 
    
    $('.combtn').on('click', function(){
-	   $('[name="c_content"]').val($('[name="c_content"]').val().replace(/\n/gi,'<br/>')); 
+	  $('[name="c_content"]').val($('[name="c_content"]').val().replace(/\n/gi,'<br/>')); 
 	   
       $.ajax({
          type:'POST',
@@ -27,11 +26,12 @@ $(document).ready(function(){
    });// 댓글 작성 
    
    $(document).on('click', '.re_delete', function() {
-      $('#re_password').parent().remove();
-      var c_num=$(this).attr('value');
-      $(this).parent().prepend('<span value="'+c_num+'"><input id="re_password"'+
-            'type="text"><button id="del_passwordBtn">삭제</button></span>');
-      return false;
+	      $('#re_wr_content').remove();
+	      $('#re_password').parent().remove();
+	      var c_num=$(this).attr('value');
+	      $(this).parent().prepend('<span value="'+c_num+'"><input id="re_password"'+
+	            'type="text"><button id="del_passwordBtn">삭제</button></span>');
+	      return false;
    });//댓글 삭제 패스워드 확인폼 
    
    $(document).on('click', '#del_passwordBtn', function() {
@@ -46,13 +46,17 @@ $(document).ready(function(){
       $('#re_password').parent().remove();
       var c_num=$(this).attr('value');
       var cmDiv=$(this).parent().parent().next();
-      $(this).parent().prepend('<span value="'+c_num+'"><input id="re_password"'+
-      'type="text"><button id="up_passwordBtn">수정</button></span>');
+      
+      /*cmDiv.val().val(cmDiv.val().replace(/\n/gi,'<br/>'));*/ 
+      
+   	  $(this).parent().prepend('<span value="'+c_num+'"><input id="re_password"'+
+   	  'type="text"><button id="up_passwordBtn">수정</button></span>');
+      
       var textArea=$('<textarea id="re_wr_content" name="re_c_content" rows="8" itemname="내용" required="" '+
        'style="width: 99%; word-break: break-all; background-image: url(../semi_view/images/wrest.gif);'+
               'background-position: right top; background-repeat: no-repeat; font-size: 12px;">'+
-       cmDiv.text()+'</textarea>');
-       cmDiv.append(textArea);
+      cmDiv.text()+'</textarea>');
+      cmDiv.append(textArea);
       return false;
    });//답변글 버튼
    
@@ -73,7 +77,7 @@ function updateReply(b_num,c_num,re_c_content,re_password){
         data:"b_num="+b_num+"&c_num="+c_num+"&re_c_content="+re_c_content+"&re_password="+re_password,
         success:listView
      });
-}
+}//end updateReplay
 
 function deleteReply(b_num,c_num,re_password){
     $.ajax({
@@ -91,7 +95,7 @@ function inputMessage(res){
    $('#wr_writer').val('');
    $('#wr_password').val('');
    listView(b_num);
-}
+}//end inputMessage
 
 function listView(b_num){
    if(b_num==-2){

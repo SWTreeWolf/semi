@@ -11,8 +11,11 @@
 <link rel="stylesheet" href="../semi_view/css/reset.css">
 <link rel="stylesheet" href="../semi_view/css/main_common.css">
 <link rel="stylesheet" href="../semi_view/css/jquery-ui.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="../semi_view/js/jquery.js"></script>
+<script type="text/javascript" src="../semi_view/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../semi_view/js/header.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function() {	
 	$('#searchBtn').click(function(){
@@ -99,19 +102,19 @@ $(document).ready(function() {
     	<!-- 이전 (PREV)  -->
 		<c:if test="${pdto.startPage>1}">
 		<spanstyle="color: #4D6185; font-size: 12px; text-decoration: underline;">
-		<a href="list.do?pageNum=${pdto.startPage-pdto.blockPage}">PREV</a></span>
+		<a href="iq_list.do?pageNum=${pdto.startPage-pdto.blockPage}">PREV</a></span>
 		</c:if>
 		
 		<!-- 페이지  블록 -->
 		<c:forEach begin="${pdto.startPage}" end="${pdto.endPage}" var="i">
 		<span style="color: #4D6185; font-size: 12px; text =decoration: underline;">
-		<a href="list.do?pageNum=${i}&searchKey=${pdto.searchKey}&searchWord=${pdto.searchWord}">${i}</a></span>
+		<a href="iq_list.do?pageNum=${i}&searchKey=${pdto.searchKey}&searchWord=${pdto.searchWord}">${i}</a></span>
 		</c:forEach>
 	
 		<!-- 다음 (NEXT)  -->
 		<c:if test="${pdto.endPage<pdto.totalPage}"> 
 		<span style="color: #4D6185; font-size: 12px; text-decoration: underline;">
-		<a href="list.do?pageNum=${pdto.startPage+pdto.blockPage}">NEXT</a></span>		
+		<a href="iq_list.do?pageNum=${pdto.startPage+pdto.blockPage}">NEXT</a></span>		
 		</c:if>
         
         <!-- 검색 -->

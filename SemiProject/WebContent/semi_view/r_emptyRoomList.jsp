@@ -39,15 +39,16 @@
 		</div>
 	</c:if>
 
-			<div id="no-room-listA" style="display:none">
-			<img src="../semi_view/images/main_image/search.png" />
-			<p>선택한 날짜는 객실이 매진되었습니다!</p>
-		</div>
+	<div id="no-room-listA" style="display: none">
+		<img src="../semi_view/images/main_image/search.png" />
+		<p>선택한 날짜는 객실이 매진되었습니다!</p>
+	</div>
 
 	<div id="room-list">
 		<c:forEach var="room" items="${list}">
 			<div class="room">
-				<img class="img" src="../semi_view/images/main_image/bed<c:url value="${room.r_num}"/>.jpg" />
+				<img class="img"
+					src="../semi_view/images/main_image/bed<c:url value="${room.r_num}"/>.jpg" />
 				<dl>
 					<dt>${room.r_name}</dt>
 					<!-- 방 이름 -->
@@ -59,7 +60,7 @@
 				</dl>
 
 				<div class="reserve-btn">
-					<p>${stay}박X ${room.r_pay}원</p>
+					<p>${stay}박X${room.r_pay}원</p>
 					<a
 						href="reserveForm.do?guests=${guests}&r_num=${room.r_num}&stay=${stay}&dateIn=${dateIn}&dateOut=${dateOut}">예약하기</a>
 				</div>

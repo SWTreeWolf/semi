@@ -285,8 +285,8 @@ public class InquiryDAO {
 		try {
 
 			conn = init();
-			String sql = "update qna set title=?,";
-			sql += "password=?, content=?, upload=? email=?, hpage=?, lk1=?, lk2=?, where num=?";
+			String sql = "update qna set title=?, ";
+			sql += "password=?, content=?, upload=?, email=?, hpage=?, lk1=?, lk2=? where num=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getTitle());
 			pstmt.setString(2, dto.getPassword());
@@ -297,8 +297,7 @@ public class InquiryDAO {
 			pstmt.setString(7, dto.getLk1());
 			pstmt.setString(8, dto.getLk2());
 			pstmt.setInt(9, dto.getNum());
-			rs = pstmt.executeQuery();
-
+			pstmt.executeUpdate();
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		} finally {

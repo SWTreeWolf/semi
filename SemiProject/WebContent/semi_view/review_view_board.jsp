@@ -73,9 +73,7 @@
 																id="modify" style="border: 0; align: absmiddle">
 															<input type="image"
 																src="../semi_view/images/btn_delete.gif" id="del"
-																style="border: 0; align: absmiddle;"> <input
-																type="image" src="../semi_view/images/btn_write.gif"
-																id="write" style="border: 0; align: absmiddle">
+																style="border: 0; align: absmiddle;"> 
 															<input type="hidden" name="num" value="${dto.num}" />
 														</form>
 													</div>
@@ -176,31 +174,6 @@
 													</div>
 													<div
 														style="height: 1px; line-height: 1px; font-size: 1px; backgroun-color: #ddd; clear: both;">&nbsp;</div>
-													<div style="clear: both; height: 43px;">
-														<div style="float: left; margin-top: 10px;">
-															<a href="view_board.do?num=${dto.num-1 }"><input
-																type="image" id="prev"
-																src="../semi_view/images/btn_prev.gif"
-																style="border: 0; align: absmiddle"></a> &nbsp;<a
-																href="view_board.do?num=${dto.num+1 }"><input
-																type="image" src="../semi_view/images/btn_next.gif"
-																style="border: 0; align: absmiddle"></a> &nbsp;
-														</div>
-														<!-- 링크 버튼 -->
-														<div style="float: right;">
-															<input type="image"
-																src="../semi_view/images/btn_list.gif"
-																style="border: 0; align: absmiddle"> <input
-																type="image" src="../semi_view/images/btn_modify.gif"
-																id="modify" style="border: 0; align: absmiddle">
-															<input type="image"
-																src="../semi_view/images/btn_delete.gif" id="del"
-																style="border: 0; align: absmiddle;"> <input
-																type="image" src="../semi_view/images/btn_write.gif"
-																id="write" style="border: 0; align: absmiddle">
-
-														</div>
-													</div>
 													<div
 														style="height: 2px; line-height: 1px; font-size: 1px; background-color: #dedede; clear: both;">
 														&nbsp;</div>

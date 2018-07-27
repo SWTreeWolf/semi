@@ -204,31 +204,6 @@
 												<tr>
 												<td>&nbsp;&nbsp;</td>
 												</tr>
-												<!-- 자동방지 시작 -->
-												<tr>
-													<td class="write_head">
-														<table cellpadding="0" cellspacing="0">
-															<tbody>
-																<tr>
-																	<td class="white_head" for="exampleInputname"
-																		style="padding-top: 10px; line-height: 20px;">자동가입방지문자</td>
-																</tr>
-															</tbody>
-														</table>
-													</td>
-													<td style="padding: 5 0 5 0;">
-														<table cellpadding="0" cellspacing="0">
-															<tbody>
-																<form id="noauto" method="post">
-																	<input type="text" id="numberReal" name="numberReal">&nbsp;&nbsp;보이는
-																	문자를 입력해 주세요
-																	<button type="button" onclick="auto();"
-																		class="btn btn-thenme-dark">확인</button>
-																</form>
-															</tbody>
-														</table>
-														<!-- 자동방지 끝 -->
-												</tr>
 											</tbody>
 										</table>
 										<table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -246,13 +221,7 @@
 							</tbody>
 						</table>
 					</form> 
-					<!-- 자동가입방지 -->
-					<script src="../semi_view/js/header_jquery-ui.min.js"></script>
-					<link rel="stylesheet" type="text/css"href="../semi_view/css/jquery.realperson.css">
-					 
-					<script type="text/javascript" src="../semi_view/js/jquery.plugin.js"></script>
-					<script type="text/javascript" src="../semi_view/js/jquery.realperson.js"></script> 
-				
+					
 					<!--에디터-->
 					<link href="../semi_view/css/bootstrap.css" rel="stylesheet">
 					<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 

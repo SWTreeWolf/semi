@@ -44,10 +44,12 @@ public class MyReserveAction {
 				obj.put("p_phoneNumber", pdto.getP_phoneNumber());
 				obj.put("p_email", pdto.getP_email());
 				obj.put("p_address", pdto.getP_address());
+				if(pdto.getP_contents() == null) {
+					pdto.setP_contents("");
+				}
 				obj.put("p_contents", pdto.getP_contents());
 				obj.put("r_total", rdto.getR_total());
 				obj.put("yes", rdto.getYes());
-				System.out.println(obj);
 				resp.getWriter().print(obj);
 		}else {
 			resp.getWriter().print(1);

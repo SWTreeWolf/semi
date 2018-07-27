@@ -4,7 +4,7 @@
 }
 
 body {
-	width: 1840px;
+    width: 1900px;
 }
 
 .v {
@@ -29,8 +29,8 @@ body {
 }
 
 .reserveForm {
-	height: 790px;
-	text-align: center;
+    height: 800px;
+    text-align: center;
 }
 
 .subject {

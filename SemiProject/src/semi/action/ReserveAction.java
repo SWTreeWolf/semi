@@ -42,8 +42,8 @@ public class ReserveAction {
 		
 		String di[]=dateIn.split("-");
 		String dout[]=dateOut.split("-");
-		java.sql.Date l_dateIn=new java.sql.Date(Integer.parseInt(di[0])-1900,Integer.parseInt(di[1]),Integer.parseInt(di[2]));
-		java.sql.Date l_dateOut=new java.sql.Date(Integer.parseInt(dout[0])-1900,Integer.parseInt(dout[1]),Integer.parseInt(dout[2]));
+		java.sql.Date l_dateIn=new java.sql.Date(Integer.parseInt(di[0])-1900,Integer.parseInt(di[1])-1,Integer.parseInt(di[2]));
+		java.sql.Date l_dateOut=new java.sql.Date(Integer.parseInt(dout[0])-1900,Integer.parseInt(dout[1])-1,Integer.parseInt(dout[2]));
 		int yes=0;
 		//카드결제인지 무통장입금인지
 		if(req.getParameter("payType").equals("card")) {

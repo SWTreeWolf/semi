@@ -14,7 +14,7 @@ import com.oreilly.servlet.MultipartRequest;
 
 import semi.action.*;
 
-@WebServlet("/chk/*")
+@WebServlet("/pension/*")
 public class Main_controller extends HttpServlet {
 
 	@Override
@@ -187,13 +187,13 @@ public class Main_controller extends HttpServlet {
 			Inquiry_DeleteAction dform = new Inquiry_DeleteAction(); 
 			dform.exeute(req,resp); 
 			resp.sendRedirect("iq_list.do");
-		}else if (action.equals("/updateForm.do")) {//이용문의 - 수정폼
+		}else if (action.equals("/iq_updateForm.do")) {//이용문의 - 수정폼
 			Inquiry_SearchPasswordAction search = new Inquiry_SearchPasswordAction(); 
 			search.execute(req,resp);
 			Inquiry_UpdateFormAction uform = new Inquiry_UpdateFormAction(); 
 			uform.execute(req, resp);
 			path = "/semi_view/i_updateboard.jsp";
-		}else if (action.equals("/checkForm.do")) { //이용문의 - 수정(비밀번호 확인)
+		}else if (action.equals("/iq_checkForm.do")) { //이용문의 - 수정(비밀번호 확인)
 			Inquiry_SearchPasswordAction search = new Inquiry_SearchPasswordAction();
 			search.execute(req, resp);
 			path = "/semi_view/i_check.jsp";

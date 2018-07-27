@@ -21,7 +21,7 @@ $(document).ready(function(){
 	});
 	$('.update').on('click',function(){
 		if(confirm("정말로 수정하시겠습니까?")==true){
-		$('.frm').attr('action','updatePro.do'); 
+		$('.frm').attr('action','iq_updatePro.do'); 
 		$('.frm').submit(); 
 		}else { 
 			return false; 
@@ -250,7 +250,7 @@ $(document).ready(function(){
              var url = "write.do";
              var opt = "width=300,height=500";
              var newWindow = Window.open(url, "noautowindow", opt);
-             $("#noauto").attr("action", "updateForm.do");
+             $("#noauto").attr("action", "iq_updateForm.do");
              $("#noauto").attr("target", "noautowindow");
              $("#noauto").submit();
          }

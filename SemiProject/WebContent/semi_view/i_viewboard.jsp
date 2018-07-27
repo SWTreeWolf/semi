@@ -74,8 +74,11 @@
 				</td></tr>
 					<tr><td height="30" background="../semi_view/images/view_dot.gif">&nbsp;&nbsp; 
 					<img src="../semi_view/images/icon_link.gif" align="absmiddle" border="0"> 
-					<a href="upload.do?num=${dto.num }" target="_blank"> ${dto.upload}&nbsp; 
-					<span style="collor: #888;"></span></a>&nbsp; 
+					<c:if test="${dto.upload ne null}">
+						<a href="upload.do?num=${dto.num }" target="_blank"> ${dto.upload}&nbsp; 
+						<span style="collor: #888;"></span></a>
+					</c:if>
+					&nbsp; 
 					<a href="${dto.lk1}">${dto.lk1}<span style="color: #ff6600; font-size: 11px;">첨부된 링크
 					</span></a></td></tr>
 					<tr><td height="150"style="word-break: break-all; padding: 10px;">${dto.content}</td></tr>
@@ -156,10 +159,10 @@
 			<div style="height: 1px; line-height: 1px; font-size: 1px; backgroun-color: #ddd; clear: both;"></div>
 				<div style="clear: both; height: 43px;">
 					<div style="float: left; margin-top: 10px;">
-					<a href="view.do?num=${(dto.num)-1}&pageNum=${pdto.currentPage}
+					<a href="iq_view.do?num=${(dto.num)-1}&pageNum=${pdto.currentPage}
   				&searchKey=${pdto.searchKey}&searchWord=${pdto.searchWord}"title="이전글"> <img src="../semi_view/images/btn_prev.gif" border="0" align="absmiddle">
 					</a> 
-					<a href="view.do?num=${(dto.num)+1}&pageNum=${pdto.currentPage}
+					<a href="iq_view.do?num=${(dto.num)+1}&pageNum=${pdto.currentPage}
   				&searchKey=${pdto.searchKey}&searchWord=${pdto.searchWord}" title=다음글"> <img src="../semi_view/images/btn_next.gif" border="0" align="absmiddle">
 					</a> 
 			</div>
