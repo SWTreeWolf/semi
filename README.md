@@ -19,6 +19,12 @@ JAVA Script/AJAX/CSS/JSP를 활용한 메인구성과 예약관리 구성
 ![er-diagram](./temp_images/erdiagram.jpg)
 
 # 예시 이미지
+![intro](./temp_images/intro1.jpg)
+
 ![intro](./temp_images/intro.jpg)
 
 ![main](./temp_images/main.jpg)
+
+![date-picker](./temp_images/datepicker.jpg)
+
+![resev](./temp_images/reserv.jpg)
